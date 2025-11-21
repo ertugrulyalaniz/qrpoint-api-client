@@ -1,0 +1,56 @@
+{
+  "name": "@qrpoint/api-client",
+  "version": "1.0.4",
+  "description": "Typed API client for QRPoint OpenAPI, usable in Next.js and Expo",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "generate:api": "openapi --input http://api.qrpoint.com.tr:6202/openapi/v1.json --output ./src/generated --client axios",
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "release": "standard-version && git push --follow-tags && npm publish"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist/"
+  ],
+  "sideEffects": false,
+  "dependencies": {
+    "axios": "^1.13.2"
+  },
+  "peerDependencies": {
+    "expo-application": "*",
+    "expo-secure-store": "*",
+    "@react-native-async-storage/async-storage": "*"
+  },
+  "peerDependenciesMeta": {
+    "expo-application": {
+      "optional": true
+    },
+    "expo-secure-store": {
+      "optional": true
+    },
+    "@react-native-async-storage/async-storage": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "openapi-typescript-codegen": "^0.29.0",
+    "standard-version": "^9.5.0",
+    "typescript": "^5.9.3"
+  }
+}
