@@ -1,6 +1,6 @@
 {
   "name": "@qrpoint/api-client",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Typed API client for QRPoint OpenAPI, usable in Next.js and Expo",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
