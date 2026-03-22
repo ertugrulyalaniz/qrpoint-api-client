@@ -1,6 +1,6 @@
 import type { EmptyOptions } from './EmptyOptions';
 import type { InvalidAccessAttemptDto } from './InvalidAccessAttemptDto';
 export type ApiCommandRequestOfInvalidAccessAttemptDtoAndEmptyOptions = {
-    data: (null | InvalidAccessAttemptDto);
+    data: InvalidAccessAttemptDto;
     options: (null | EmptyOptions);
 };

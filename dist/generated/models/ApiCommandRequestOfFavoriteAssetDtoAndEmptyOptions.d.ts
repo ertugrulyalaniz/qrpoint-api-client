@@ -1,6 +1,6 @@
 import type { EmptyOptions } from './EmptyOptions';
 import type { FavoriteAssetDto } from './FavoriteAssetDto';
 export type ApiCommandRequestOfFavoriteAssetDtoAndEmptyOptions = {
-    data: (null | FavoriteAssetDto);
+    data: FavoriteAssetDto;
     options: (null | EmptyOptions);
 };

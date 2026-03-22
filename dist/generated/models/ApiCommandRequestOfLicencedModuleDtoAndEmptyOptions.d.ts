@@ -1,6 +1,6 @@
 import type { EmptyOptions } from './EmptyOptions';
 import type { LicencedModuleDto } from './LicencedModuleDto';
 export type ApiCommandRequestOfLicencedModuleDtoAndEmptyOptions = {
-    data: (null | LicencedModuleDto);
+    data: LicencedModuleDto;
     options: (null | EmptyOptions);
 };

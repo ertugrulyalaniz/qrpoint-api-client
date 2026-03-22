@@ -1,6 +1,6 @@
 import type { AllowedAttendancePointDto } from './AllowedAttendancePointDto';
 import type { EmptyOptions } from './EmptyOptions';
 export type ApiCommandRequestOfAllowedAttendancePointDtoAndEmptyOptions = {
-    data: (null | AllowedAttendancePointDto);
+    data: AllowedAttendancePointDto;
     options: (null | EmptyOptions);
 };

@@ -1,6 +1,6 @@
 import type { AccountRoleDto } from './AccountRoleDto';
 import type { EmptyOptions } from './EmptyOptions';
 export type ApiCommandRequestOfAccountRoleDtoAndEmptyOptions = {
-    data: (null | AccountRoleDto);
+    data: AccountRoleDto;
     options: (null | EmptyOptions);
 };

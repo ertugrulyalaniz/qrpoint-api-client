@@ -1,6 +1,6 @@
 import type { ActivityTemplateDto } from './ActivityTemplateDto';
 import type { EmptyOptions } from './EmptyOptions';
 export type ApiCommandRequestOfActivityTemplateDtoAndEmptyOptions = {
-    data: (null | ActivityTemplateDto);
+    data: ActivityTemplateDto;
     options: (null | EmptyOptions);
 };

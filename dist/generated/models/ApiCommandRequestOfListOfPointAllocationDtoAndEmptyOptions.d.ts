@@ -1,5 +1,6 @@
 import type { EmptyOptions } from './EmptyOptions';
+import type { PointAllocationDto } from './PointAllocationDto';
 export type ApiCommandRequestOfListOfPointAllocationDtoAndEmptyOptions = {
-    data: any[] | null;
+    data: Array<PointAllocationDto>;
     options: (null | EmptyOptions);
 };

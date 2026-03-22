@@ -3,7 +3,7 @@
 /* tslint:disable */
 /* eslint-disable */
 export type CancelActivityOpsData = {
-    activityId: number | string;
+    pointId: number | string;
     cancellationReason: string;
 };
 

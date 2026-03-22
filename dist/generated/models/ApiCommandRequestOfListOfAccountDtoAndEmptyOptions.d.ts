@@ -1,5 +1,6 @@
+import type { AccountDto } from './AccountDto';
 import type { EmptyOptions } from './EmptyOptions';
 export type ApiCommandRequestOfListOfAccountDtoAndEmptyOptions = {
-    data: any[] | null;
+    data: Array<AccountDto>;
     options: (null | EmptyOptions);
 };

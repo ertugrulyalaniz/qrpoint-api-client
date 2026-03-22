@@ -1,5 +1,6 @@
+import type { DepartmentDto } from './DepartmentDto';
 import type { EmptyOptions } from './EmptyOptions';
 export type ApiCommandRequestOfListOfDepartmentDtoAndEmptyOptions = {
-    data: any[] | null;
+    data: Array<DepartmentDto>;
     options: (null | EmptyOptions);
 };

@@ -16,7 +16,7 @@ export declare class DataActivityTypeRolesService {
      * @returns ApiResponseOfActivityTypeRoleDto OK
      * @throws ApiError
      */
-    static postApiDataActivityTypeRoleSCreate(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfActivityTypeRoleDtoAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfActivityTypeRoleDto>;
+    static postApiDataActivityTypeRolesCreate(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfActivityTypeRoleDtoAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfActivityTypeRoleDto>;
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
      * @param xTenantId Tenant Kimliği (Zorunlu)
@@ -25,7 +25,7 @@ export declare class DataActivityTypeRolesService {
      * @returns ApiResponseOfActivityTypeRoleDto OK
      * @throws ApiError
      */
-    static postApiDataActivityTypeRoleSUpdate(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfActivityTypeRoleDtoAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfActivityTypeRoleDto>;
+    static postApiDataActivityTypeRolesUpdate(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfActivityTypeRoleDtoAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfActivityTypeRoleDto>;
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
      * @param xTenantId Tenant Kimliği (Zorunlu)
@@ -34,7 +34,7 @@ export declare class DataActivityTypeRolesService {
      * @returns ApiResponseOfIdData OK
      * @throws ApiError
      */
-    static postApiDataActivityTypeRoleSDelete(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfIdDataAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfIdData>;
+    static postApiDataActivityTypeRolesDelete(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfIdDataAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfIdData>;
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
      * @param xTenantId Tenant Kimliği (Zorunlu)
@@ -43,7 +43,7 @@ export declare class DataActivityTypeRolesService {
      * @returns ApiResponseOfIReadOnlyListOfActivityTypeRoleDto OK
      * @throws ApiError
      */
-    static postApiDataActivityTypeRoleSBatch(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfListOfActivityTypeRoleDtoAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfIReadOnlyListOfActivityTypeRoleDto>;
+    static postApiDataActivityTypeRolesBatch(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfListOfActivityTypeRoleDtoAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfIReadOnlyListOfActivityTypeRoleDto>;
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
      * @param xTenantId Tenant Kimliği (Zorunlu)
@@ -52,7 +52,7 @@ export declare class DataActivityTypeRolesService {
      * @returns ApiResponseOfIReadOnlyListOfActivityTypeRoleDto OK
      * @throws ApiError
      */
-    static postApiDataActivityTypeRoleSBulk(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfListOfActivityTypeRoleDtoAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfIReadOnlyListOfActivityTypeRoleDto>;
+    static postApiDataActivityTypeRolesBulk(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfListOfActivityTypeRoleDtoAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfIReadOnlyListOfActivityTypeRoleDto>;
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
      * @param xTenantId Tenant Kimliği (Zorunlu)
@@ -61,7 +61,7 @@ export declare class DataActivityTypeRolesService {
      * @returns ApiResponseOfActivityTypeRoleDto OK
      * @throws ApiError
      */
-    static postApiDataActivityTypeRoleSGetbyid(xClientId: string, xTenantId: string, requestBody: ApiQueryRequestOfIdData, acceptLanguage?: string): CancelablePromise<ApiResponseOfActivityTypeRoleDto>;
+    static postApiDataActivityTypeRolesGetbyid(xClientId: string, xTenantId: string, requestBody: ApiQueryRequestOfIdData, acceptLanguage?: string): CancelablePromise<ApiResponseOfActivityTypeRoleDto>;
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
      * @param xTenantId Tenant Kimliği (Zorunlu)
@@ -70,7 +70,7 @@ export declare class DataActivityTypeRolesService {
      * @returns ApiResponseOfActivityTypeRoleDto OK
      * @throws ApiError
      */
-    static postApiDataActivityTypeRoleSGetall(xClientId: string, xTenantId: string, requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfActivityTypeRoleDto>;
+    static postApiDataActivityTypeRolesGetall(xClientId: string, xTenantId: string, requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfActivityTypeRoleDto>;
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
      * @param xTenantId Tenant Kimliği (Zorunlu)
@@ -79,5 +79,5 @@ export declare class DataActivityTypeRolesService {
      * @returns ApiResponseOfActivityTypeRoleDto OK
      * @throws ApiError
      */
-    static postApiDataActivityTypeRoleSGetpaged(xClientId: string, xTenantId: string, requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfActivityTypeRoleDto>;
+    static postApiDataActivityTypeRolesGetpaged(xClientId: string, xTenantId: string, requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfActivityTypeRoleDto>;
 }

@@ -1,6 +1,6 @@
 import type { EmptyOptions } from './EmptyOptions';
 import type { SystemRoleDto } from './SystemRoleDto';
 export type ApiCommandRequestOfSystemRoleDtoAndEmptyOptions = {
-    data: (null | SystemRoleDto);
+    data: SystemRoleDto;
     options: (null | EmptyOptions);
 };

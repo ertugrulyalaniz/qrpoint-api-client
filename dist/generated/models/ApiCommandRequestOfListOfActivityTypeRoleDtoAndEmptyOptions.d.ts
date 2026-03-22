@@ -1,5 +1,6 @@
+import type { ActivityTypeRoleDto } from './ActivityTypeRoleDto';
 import type { EmptyOptions } from './EmptyOptions';
 export type ApiCommandRequestOfListOfActivityTypeRoleDtoAndEmptyOptions = {
-    data: any[] | null;
+    data: Array<ActivityTypeRoleDto>;
     options: (null | EmptyOptions);
 };

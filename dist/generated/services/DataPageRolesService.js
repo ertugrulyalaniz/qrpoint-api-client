@@ -12,10 +12,10 @@ class DataPageRolesService {
      * @returns ApiResponseOfPageRoleDto OK
      * @throws ApiError
      */
-    static postApiDataPageRoleSCreate(xClientId, xTenantId, requestBody, acceptLanguage) {
+    static postApiDataPageRolesCreate(xClientId, xTenantId, requestBody, acceptLanguage) {
         return (0, request_1.request)(OpenAPI_1.OpenAPI, {
             method: 'POST',
-            url: '/api/data/page-role-s/create',
+            url: '/api/data/page-roles/create',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
@@ -38,10 +38,10 @@ class DataPageRolesService {
      * @returns ApiResponseOfPageRoleDto OK
      * @throws ApiError
      */
-    static postApiDataPageRoleSUpdate(xClientId, xTenantId, requestBody, acceptLanguage) {
+    static postApiDataPageRolesUpdate(xClientId, xTenantId, requestBody, acceptLanguage) {
         return (0, request_1.request)(OpenAPI_1.OpenAPI, {
             method: 'POST',
-            url: '/api/data/page-role-s/update',
+            url: '/api/data/page-roles/update',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
@@ -64,10 +64,10 @@ class DataPageRolesService {
      * @returns ApiResponseOfIdData OK
      * @throws ApiError
      */
-    static postApiDataPageRoleSDelete(xClientId, xTenantId, requestBody, acceptLanguage) {
+    static postApiDataPageRolesDelete(xClientId, xTenantId, requestBody, acceptLanguage) {
         return (0, request_1.request)(OpenAPI_1.OpenAPI, {
             method: 'POST',
-            url: '/api/data/page-role-s/delete',
+            url: '/api/data/page-roles/delete',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
@@ -90,10 +90,10 @@ class DataPageRolesService {
      * @returns ApiResponseOfIReadOnlyListOfPageRoleDto OK
      * @throws ApiError
      */
-    static postApiDataPageRoleSBatch(xClientId, xTenantId, requestBody, acceptLanguage) {
+    static postApiDataPageRolesBatch(xClientId, xTenantId, requestBody, acceptLanguage) {
         return (0, request_1.request)(OpenAPI_1.OpenAPI, {
             method: 'POST',
-            url: '/api/data/page-role-s/batch',
+            url: '/api/data/page-roles/batch',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
@@ -116,10 +116,10 @@ class DataPageRolesService {
      * @returns ApiResponseOfIReadOnlyListOfPageRoleDto OK
      * @throws ApiError
      */
-    static postApiDataPageRoleSBulk(xClientId, xTenantId, requestBody, acceptLanguage) {
+    static postApiDataPageRolesBulk(xClientId, xTenantId, requestBody, acceptLanguage) {
         return (0, request_1.request)(OpenAPI_1.OpenAPI, {
             method: 'POST',
-            url: '/api/data/page-role-s/bulk',
+            url: '/api/data/page-roles/bulk',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
@@ -142,10 +142,10 @@ class DataPageRolesService {
      * @returns ApiResponseOfPageRoleDto OK
      * @throws ApiError
      */
-    static postApiDataPageRoleSGetbyid(xClientId, xTenantId, requestBody, acceptLanguage) {
+    static postApiDataPageRolesGetbyid(xClientId, xTenantId, requestBody, acceptLanguage) {
         return (0, request_1.request)(OpenAPI_1.OpenAPI, {
             method: 'POST',
-            url: '/api/data/page-role-s/getbyid',
+            url: '/api/data/page-roles/getbyid',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
@@ -168,10 +168,10 @@ class DataPageRolesService {
      * @returns ApiResponseOfPageRoleDto OK
      * @throws ApiError
      */
-    static postApiDataPageRoleSGetall(xClientId, xTenantId, requestBody, acceptLanguage) {
+    static postApiDataPageRolesGetall(xClientId, xTenantId, requestBody, acceptLanguage) {
         return (0, request_1.request)(OpenAPI_1.OpenAPI, {
             method: 'POST',
-            url: '/api/data/page-role-s/getall',
+            url: '/api/data/page-roles/getall',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
@@ -194,10 +194,10 @@ class DataPageRolesService {
      * @returns ApiResponseOfPageRoleDto OK
      * @throws ApiError
      */
-    static postApiDataPageRoleSGetpaged(xClientId, xTenantId, requestBody, acceptLanguage) {
+    static postApiDataPageRolesGetpaged(xClientId, xTenantId, requestBody, acceptLanguage) {
         return (0, request_1.request)(OpenAPI_1.OpenAPI, {
             method: 'POST',
-            url: '/api/data/page-role-s/getpaged',
+            url: '/api/data/page-roles/getpaged',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,

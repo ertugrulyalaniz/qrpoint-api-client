@@ -16,7 +16,7 @@ export declare class DataPageObjectRolesService {
      * @returns ApiResponseOfPageObjectRoleDto OK
      * @throws ApiError
      */
-    static postApiDataPageObjectRoleSCreate(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfPageObjectRoleDtoAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfPageObjectRoleDto>;
+    static postApiDataPageObjectRolesCreate(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfPageObjectRoleDtoAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfPageObjectRoleDto>;
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
      * @param xTenantId Tenant Kimliği (Zorunlu)
@@ -25,7 +25,7 @@ export declare class DataPageObjectRolesService {
      * @returns ApiResponseOfPageObjectRoleDto OK
      * @throws ApiError
      */
-    static postApiDataPageObjectRoleSUpdate(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfPageObjectRoleDtoAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfPageObjectRoleDto>;
+    static postApiDataPageObjectRolesUpdate(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfPageObjectRoleDtoAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfPageObjectRoleDto>;
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
      * @param xTenantId Tenant Kimliği (Zorunlu)
@@ -34,7 +34,7 @@ export declare class DataPageObjectRolesService {
      * @returns ApiResponseOfIdData OK
      * @throws ApiError
      */
-    static postApiDataPageObjectRoleSDelete(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfIdDataAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfIdData>;
+    static postApiDataPageObjectRolesDelete(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfIdDataAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfIdData>;
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
      * @param xTenantId Tenant Kimliği (Zorunlu)
@@ -43,7 +43,7 @@ export declare class DataPageObjectRolesService {
      * @returns ApiResponseOfIReadOnlyListOfPageObjectRoleDto OK
      * @throws ApiError
      */
-    static postApiDataPageObjectRoleSBatch(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfListOfPageObjectRoleDtoAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfIReadOnlyListOfPageObjectRoleDto>;
+    static postApiDataPageObjectRolesBatch(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfListOfPageObjectRoleDtoAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfIReadOnlyListOfPageObjectRoleDto>;
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
      * @param xTenantId Tenant Kimliği (Zorunlu)
@@ -52,7 +52,7 @@ export declare class DataPageObjectRolesService {
      * @returns ApiResponseOfIReadOnlyListOfPageObjectRoleDto OK
      * @throws ApiError
      */
-    static postApiDataPageObjectRoleSBulk(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfListOfPageObjectRoleDtoAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfIReadOnlyListOfPageObjectRoleDto>;
+    static postApiDataPageObjectRolesBulk(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfListOfPageObjectRoleDtoAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfIReadOnlyListOfPageObjectRoleDto>;
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
      * @param xTenantId Tenant Kimliği (Zorunlu)
@@ -61,7 +61,7 @@ export declare class DataPageObjectRolesService {
      * @returns ApiResponseOfPageObjectRoleDto OK
      * @throws ApiError
      */
-    static postApiDataPageObjectRoleSGetbyid(xClientId: string, xTenantId: string, requestBody: ApiQueryRequestOfIdData, acceptLanguage?: string): CancelablePromise<ApiResponseOfPageObjectRoleDto>;
+    static postApiDataPageObjectRolesGetbyid(xClientId: string, xTenantId: string, requestBody: ApiQueryRequestOfIdData, acceptLanguage?: string): CancelablePromise<ApiResponseOfPageObjectRoleDto>;
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
      * @param xTenantId Tenant Kimliği (Zorunlu)
@@ -70,7 +70,7 @@ export declare class DataPageObjectRolesService {
      * @returns ApiResponseOfPageObjectRoleDto OK
      * @throws ApiError
      */
-    static postApiDataPageObjectRoleSGetall(xClientId: string, xTenantId: string, requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfPageObjectRoleDto>;
+    static postApiDataPageObjectRolesGetall(xClientId: string, xTenantId: string, requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfPageObjectRoleDto>;
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
      * @param xTenantId Tenant Kimliği (Zorunlu)
@@ -79,5 +79,5 @@ export declare class DataPageObjectRolesService {
      * @returns ApiResponseOfPageObjectRoleDto OK
      * @throws ApiError
      */
-    static postApiDataPageObjectRoleSGetpaged(xClientId: string, xTenantId: string, requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfPageObjectRoleDto>;
+    static postApiDataPageObjectRolesGetpaged(xClientId: string, xTenantId: string, requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfPageObjectRoleDto>;
 }

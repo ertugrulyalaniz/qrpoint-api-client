@@ -1,6 +1,6 @@
 import type { AssetDto } from './AssetDto';
 import type { EmptyOptions } from './EmptyOptions';
 export type ApiCommandRequestOfAssetDtoAndEmptyOptions = {
-    data: (null | AssetDto);
+    data: AssetDto;
     options: (null | EmptyOptions);
 };

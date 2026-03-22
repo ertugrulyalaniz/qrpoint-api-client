@@ -1,5 +1,6 @@
 import type { EmptyOptions } from './EmptyOptions';
+import type { PageObjectRoleDto } from './PageObjectRoleDto';
 export type ApiCommandRequestOfListOfPageObjectRoleDtoAndEmptyOptions = {
-    data: any[] | null;
+    data: Array<PageObjectRoleDto>;
     options: (null | EmptyOptions);
 };

@@ -16,7 +16,7 @@ export declare class DataActionRolesService {
      * @returns ApiResponseOfActionRoleDto OK
      * @throws ApiError
      */
-    static postApiDataActionRoleSCreate(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfActionRoleDtoAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfActionRoleDto>;
+    static postApiDataActionRolesCreate(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfActionRoleDtoAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfActionRoleDto>;
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
      * @param xTenantId Tenant Kimliği (Zorunlu)
@@ -25,7 +25,7 @@ export declare class DataActionRolesService {
      * @returns ApiResponseOfActionRoleDto OK
      * @throws ApiError
      */
-    static postApiDataActionRoleSUpdate(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfActionRoleDtoAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfActionRoleDto>;
+    static postApiDataActionRolesUpdate(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfActionRoleDtoAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfActionRoleDto>;
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
      * @param xTenantId Tenant Kimliği (Zorunlu)
@@ -34,7 +34,7 @@ export declare class DataActionRolesService {
      * @returns ApiResponseOfIdData OK
      * @throws ApiError
      */
-    static postApiDataActionRoleSDelete(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfIdDataAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfIdData>;
+    static postApiDataActionRolesDelete(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfIdDataAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfIdData>;
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
      * @param xTenantId Tenant Kimliği (Zorunlu)
@@ -43,7 +43,7 @@ export declare class DataActionRolesService {
      * @returns ApiResponseOfIReadOnlyListOfActionRoleDto OK
      * @throws ApiError
      */
-    static postApiDataActionRoleSBatch(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfListOfActionRoleDtoAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfIReadOnlyListOfActionRoleDto>;
+    static postApiDataActionRolesBatch(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfListOfActionRoleDtoAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfIReadOnlyListOfActionRoleDto>;
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
      * @param xTenantId Tenant Kimliği (Zorunlu)
@@ -52,7 +52,7 @@ export declare class DataActionRolesService {
      * @returns ApiResponseOfIReadOnlyListOfActionRoleDto OK
      * @throws ApiError
      */
-    static postApiDataActionRoleSBulk(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfListOfActionRoleDtoAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfIReadOnlyListOfActionRoleDto>;
+    static postApiDataActionRolesBulk(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfListOfActionRoleDtoAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfIReadOnlyListOfActionRoleDto>;
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
      * @param xTenantId Tenant Kimliği (Zorunlu)
@@ -61,7 +61,7 @@ export declare class DataActionRolesService {
      * @returns ApiResponseOfActionRoleDto OK
      * @throws ApiError
      */
-    static postApiDataActionRoleSGetbyid(xClientId: string, xTenantId: string, requestBody: ApiQueryRequestOfIdData, acceptLanguage?: string): CancelablePromise<ApiResponseOfActionRoleDto>;
+    static postApiDataActionRolesGetbyid(xClientId: string, xTenantId: string, requestBody: ApiQueryRequestOfIdData, acceptLanguage?: string): CancelablePromise<ApiResponseOfActionRoleDto>;
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
      * @param xTenantId Tenant Kimliği (Zorunlu)
@@ -70,7 +70,7 @@ export declare class DataActionRolesService {
      * @returns ApiResponseOfActionRoleDto OK
      * @throws ApiError
      */
-    static postApiDataActionRoleSGetall(xClientId: string, xTenantId: string, requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfActionRoleDto>;
+    static postApiDataActionRolesGetall(xClientId: string, xTenantId: string, requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfActionRoleDto>;
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
      * @param xTenantId Tenant Kimliği (Zorunlu)
@@ -79,5 +79,5 @@ export declare class DataActionRolesService {
      * @returns ApiResponseOfActionRoleDto OK
      * @throws ApiError
      */
-    static postApiDataActionRoleSGetpaged(xClientId: string, xTenantId: string, requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfActionRoleDto>;
+    static postApiDataActionRolesGetpaged(xClientId: string, xTenantId: string, requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfActionRoleDto>;
 }

@@ -12,10 +12,10 @@ class DataUserSystemRolesService {
      * @returns ApiResponseOfUserSystemRoleDto OK
      * @throws ApiError
      */
-    static postApiDataUserSystemRoleSCreate(xClientId, xTenantId, requestBody, acceptLanguage) {
+    static postApiDataUserSystemRolesCreate(xClientId, xTenantId, requestBody, acceptLanguage) {
         return (0, request_1.request)(OpenAPI_1.OpenAPI, {
             method: 'POST',
-            url: '/api/data/user-system-role-s/create',
+            url: '/api/data/user-system-roles/create',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
@@ -37,10 +37,10 @@ class DataUserSystemRolesService {
      * @returns ApiResponseOfUserSystemRoleDto OK
      * @throws ApiError
      */
-    static postApiDataUserSystemRoleSUpdate(xClientId, xTenantId, requestBody, acceptLanguage) {
+    static postApiDataUserSystemRolesUpdate(xClientId, xTenantId, requestBody, acceptLanguage) {
         return (0, request_1.request)(OpenAPI_1.OpenAPI, {
             method: 'POST',
-            url: '/api/data/user-system-role-s/update',
+            url: '/api/data/user-system-roles/update',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
@@ -62,10 +62,10 @@ class DataUserSystemRolesService {
      * @returns ApiResponseOfIdData OK
      * @throws ApiError
      */
-    static postApiDataUserSystemRoleSDelete(xClientId, xTenantId, requestBody, acceptLanguage) {
+    static postApiDataUserSystemRolesDelete(xClientId, xTenantId, requestBody, acceptLanguage) {
         return (0, request_1.request)(OpenAPI_1.OpenAPI, {
             method: 'POST',
-            url: '/api/data/user-system-role-s/delete',
+            url: '/api/data/user-system-roles/delete',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
@@ -87,10 +87,10 @@ class DataUserSystemRolesService {
      * @returns ApiResponseOfIReadOnlyListOfUserSystemRoleDto OK
      * @throws ApiError
      */
-    static postApiDataUserSystemRoleSBatch(xClientId, xTenantId, requestBody, acceptLanguage) {
+    static postApiDataUserSystemRolesBatch(xClientId, xTenantId, requestBody, acceptLanguage) {
         return (0, request_1.request)(OpenAPI_1.OpenAPI, {
             method: 'POST',
-            url: '/api/data/user-system-role-s/batch',
+            url: '/api/data/user-system-roles/batch',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
@@ -112,10 +112,10 @@ class DataUserSystemRolesService {
      * @returns ApiResponseOfIReadOnlyListOfUserSystemRoleDto OK
      * @throws ApiError
      */
-    static postApiDataUserSystemRoleSBulk(xClientId, xTenantId, requestBody, acceptLanguage) {
+    static postApiDataUserSystemRolesBulk(xClientId, xTenantId, requestBody, acceptLanguage) {
         return (0, request_1.request)(OpenAPI_1.OpenAPI, {
             method: 'POST',
-            url: '/api/data/user-system-role-s/bulk',
+            url: '/api/data/user-system-roles/bulk',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
@@ -137,10 +137,10 @@ class DataUserSystemRolesService {
      * @returns ApiResponseOfUserSystemRoleDto OK
      * @throws ApiError
      */
-    static postApiDataUserSystemRoleSGetbyid(xClientId, xTenantId, requestBody, acceptLanguage) {
+    static postApiDataUserSystemRolesGetbyid(xClientId, xTenantId, requestBody, acceptLanguage) {
         return (0, request_1.request)(OpenAPI_1.OpenAPI, {
             method: 'POST',
-            url: '/api/data/user-system-role-s/getbyid',
+            url: '/api/data/user-system-roles/getbyid',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
@@ -163,10 +163,10 @@ class DataUserSystemRolesService {
      * @returns ApiResponseOfUserSystemRoleDto OK
      * @throws ApiError
      */
-    static postApiDataUserSystemRoleSGetall(xClientId, xTenantId, requestBody, acceptLanguage) {
+    static postApiDataUserSystemRolesGetall(xClientId, xTenantId, requestBody, acceptLanguage) {
         return (0, request_1.request)(OpenAPI_1.OpenAPI, {
             method: 'POST',
-            url: '/api/data/user-system-role-s/getall',
+            url: '/api/data/user-system-roles/getall',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
@@ -188,10 +188,10 @@ class DataUserSystemRolesService {
      * @returns ApiResponseOfUserSystemRoleDto OK
      * @throws ApiError
      */
-    static postApiDataUserSystemRoleSGetpaged(xClientId, xTenantId, requestBody, acceptLanguage) {
+    static postApiDataUserSystemRolesGetpaged(xClientId, xTenantId, requestBody, acceptLanguage) {
         return (0, request_1.request)(OpenAPI_1.OpenAPI, {
             method: 'POST',
-            url: '/api/data/user-system-role-s/getpaged',
+            url: '/api/data/user-system-roles/getpaged',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,

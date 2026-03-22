@@ -1,5 +1,6 @@
 import type { EmptyOptions } from './EmptyOptions';
+import type { ProcedureDto } from './ProcedureDto';
 export type ApiCommandRequestOfListOfProcedureDtoAndEmptyOptions = {
-    data: any[] | null;
+    data: Array<ProcedureDto>;
     options: (null | EmptyOptions);
 };

@@ -12,10 +12,10 @@ class DataActivityTypeRolesService {
      * @returns ApiResponseOfActivityTypeRoleDto OK
      * @throws ApiError
      */
-    static postApiDataActivityTypeRoleSCreate(xClientId, xTenantId, requestBody, acceptLanguage) {
+    static postApiDataActivityTypeRolesCreate(xClientId, xTenantId, requestBody, acceptLanguage) {
         return (0, request_1.request)(OpenAPI_1.OpenAPI, {
             method: 'POST',
-            url: '/api/data/activity-type-role-s/create',
+            url: '/api/data/activity-type-roles/create',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
@@ -38,10 +38,10 @@ class DataActivityTypeRolesService {
      * @returns ApiResponseOfActivityTypeRoleDto OK
      * @throws ApiError
      */
-    static postApiDataActivityTypeRoleSUpdate(xClientId, xTenantId, requestBody, acceptLanguage) {
+    static postApiDataActivityTypeRolesUpdate(xClientId, xTenantId, requestBody, acceptLanguage) {
         return (0, request_1.request)(OpenAPI_1.OpenAPI, {
             method: 'POST',
-            url: '/api/data/activity-type-role-s/update',
+            url: '/api/data/activity-type-roles/update',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
@@ -64,10 +64,10 @@ class DataActivityTypeRolesService {
      * @returns ApiResponseOfIdData OK
      * @throws ApiError
      */
-    static postApiDataActivityTypeRoleSDelete(xClientId, xTenantId, requestBody, acceptLanguage) {
+    static postApiDataActivityTypeRolesDelete(xClientId, xTenantId, requestBody, acceptLanguage) {
         return (0, request_1.request)(OpenAPI_1.OpenAPI, {
             method: 'POST',
-            url: '/api/data/activity-type-role-s/delete',
+            url: '/api/data/activity-type-roles/delete',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
@@ -90,10 +90,10 @@ class DataActivityTypeRolesService {
      * @returns ApiResponseOfIReadOnlyListOfActivityTypeRoleDto OK
      * @throws ApiError
      */
-    static postApiDataActivityTypeRoleSBatch(xClientId, xTenantId, requestBody, acceptLanguage) {
+    static postApiDataActivityTypeRolesBatch(xClientId, xTenantId, requestBody, acceptLanguage) {
         return (0, request_1.request)(OpenAPI_1.OpenAPI, {
             method: 'POST',
-            url: '/api/data/activity-type-role-s/batch',
+            url: '/api/data/activity-type-roles/batch',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
@@ -116,10 +116,10 @@ class DataActivityTypeRolesService {
      * @returns ApiResponseOfIReadOnlyListOfActivityTypeRoleDto OK
      * @throws ApiError
      */
-    static postApiDataActivityTypeRoleSBulk(xClientId, xTenantId, requestBody, acceptLanguage) {
+    static postApiDataActivityTypeRolesBulk(xClientId, xTenantId, requestBody, acceptLanguage) {
         return (0, request_1.request)(OpenAPI_1.OpenAPI, {
             method: 'POST',
-            url: '/api/data/activity-type-role-s/bulk',
+            url: '/api/data/activity-type-roles/bulk',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
@@ -142,10 +142,10 @@ class DataActivityTypeRolesService {
      * @returns ApiResponseOfActivityTypeRoleDto OK
      * @throws ApiError
      */
-    static postApiDataActivityTypeRoleSGetbyid(xClientId, xTenantId, requestBody, acceptLanguage) {
+    static postApiDataActivityTypeRolesGetbyid(xClientId, xTenantId, requestBody, acceptLanguage) {
         return (0, request_1.request)(OpenAPI_1.OpenAPI, {
             method: 'POST',
-            url: '/api/data/activity-type-role-s/getbyid',
+            url: '/api/data/activity-type-roles/getbyid',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
@@ -168,10 +168,10 @@ class DataActivityTypeRolesService {
      * @returns ApiResponseOfActivityTypeRoleDto OK
      * @throws ApiError
      */
-    static postApiDataActivityTypeRoleSGetall(xClientId, xTenantId, requestBody, acceptLanguage) {
+    static postApiDataActivityTypeRolesGetall(xClientId, xTenantId, requestBody, acceptLanguage) {
         return (0, request_1.request)(OpenAPI_1.OpenAPI, {
             method: 'POST',
-            url: '/api/data/activity-type-role-s/getall',
+            url: '/api/data/activity-type-roles/getall',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
@@ -194,10 +194,10 @@ class DataActivityTypeRolesService {
      * @returns ApiResponseOfActivityTypeRoleDto OK
      * @throws ApiError
      */
-    static postApiDataActivityTypeRoleSGetpaged(xClientId, xTenantId, requestBody, acceptLanguage) {
+    static postApiDataActivityTypeRolesGetpaged(xClientId, xTenantId, requestBody, acceptLanguage) {
         return (0, request_1.request)(OpenAPI_1.OpenAPI, {
             method: 'POST',
-            url: '/api/data/activity-type-role-s/getpaged',
+            url: '/api/data/activity-type-roles/getpaged',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,

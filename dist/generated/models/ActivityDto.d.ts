@@ -13,6 +13,7 @@ export type ActivityDto = {
     assignedTo?: number | string | null;
     openedBy?: number | string | null;
     approvedBy?: number | string | null;
+    startedBy?: number | string | null;
     completedBy?: number | string | null;
     cancelledBy?: number | string | null;
     scheduledTime?: any;

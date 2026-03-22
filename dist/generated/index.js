@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DataLicencesService = exports.DataLicencedModulesService = exports.DataJobPositionsService = exports.DataInvalidAccessAttemptsService = exports.DataInvalidAccessAttemptReasonsService = exports.DataFavoriteAssetsService = exports.DataDeviceTypesService = exports.DataDevicesService = exports.DataDepartmentsService = exports.DataAttachmentTypesService = exports.DataAttachmentsService = exports.DataAssetTypesService = exports.DataAssetStatusService = exports.DataAssetsService = exports.DataAssetActivityTypesService = exports.DataAllowedAttendancePointsService = exports.DataAgreementTypesService = exports.DataAgreementsService = exports.DataAddressTypesService = exports.DataAddressesService = exports.DataActivityTypesService = exports.DataActivityTypeRolesService = exports.DataActivityTriggerTypesService = exports.DataActivityTemplatesService = exports.DataActivityStatusService = exports.DataActivityRulesService = exports.DataActivityProcedureStepStatusesService = exports.DataActivityProcedureStepsService = exports.DataActivityProceduresService = exports.DataActivityOccurrenceTypesService = exports.DataActivityKindsService = exports.DataActivityFeedbacksService = exports.DataActivityExecutionModesService = exports.DataActivityCreationModesService = exports.DataActivityCategoriesService = exports.DataActivitiesService = exports.DataActionsService = exports.DataActionRolesService = exports.DataAccountsService = exports.DataAccountRolesService = exports.BffMobileProfileService = exports.BffMobileNotificationsService = exports.BffMobileHomeService = exports.BffMobileDataService = exports.BffMobileAssetsService = exports.AuthService = exports.OpenAPI = exports.CancelError = exports.CancelablePromise = exports.ApiError = void 0;
-exports.RegistrationsService = exports.OpsScanService = exports.OpsPointService = exports.OpsDeviceService = exports.OpsActivityService = exports.FileStorageService = exports.DataWorksService = exports.DataUserSystemRolesService = exports.DataUserInvitationsService = exports.DataSystemRolesService = exports.DataStorageTypesService = exports.DataStoragesService = exports.DataStorageItemTypesService = exports.DataStorageItemsService = exports.DataSmsOutboxStatusService = exports.DataSmsOutboxService = exports.DataShiftsService = exports.DataRolesService = exports.DataProcedureStepsService = exports.DataProceduresService = exports.DataPointStatusService = exports.DataPointsService = exports.DataPointAssetsService = exports.DataPointAllocationsService = exports.DataPagesService = exports.DataPageRolesService = exports.DataPageRoleAttributesService = exports.DataPageObjectsService = exports.DataPageObjectRolesService = exports.DataPageObjectRoleAttributesService = exports.DataPageObjectAttributesService = exports.DataPageAttributesService = exports.DataOrganizationSettingsService = exports.DataOrganizationsService = exports.DataNotificationsService = exports.DataNotificationRecipientsService = exports.DataModulesService = exports.DataMailOutboxStatusService = exports.DataMailOutboxService = exports.DataLocationTypesService = exports.DataLocationsService = void 0;
+exports.DataFavoriteAssetsService = exports.DataDistrictsService = exports.DataDeviceTypesService = exports.DataDevicesService = exports.DataDepartmentsService = exports.DataCountriesService = exports.DataCitiesService = exports.DataAttachmentTypesService = exports.DataAttachmentsService = exports.DataAssetTypesService = exports.DataAssetStatusService = exports.DataAssetsService = exports.DataAssetRolesService = exports.DataAssetActivityTypesService = exports.DataAllowedAttendancePointsService = exports.DataAgreementTypesService = exports.DataAgreementsService = exports.DataAddressTypesService = exports.DataAddressesService = exports.DataActivityTypesService = exports.DataActivityTypeRolesService = exports.DataActivityTriggerTypesService = exports.DataActivityTemplatesService = exports.DataActivityStatusService = exports.DataActivityRulesService = exports.DataActivityProcedureStepStatusesService = exports.DataActivityProcedureStepsService = exports.DataActivityProceduresService = exports.DataActivityOccurrenceTypesService = exports.DataActivityKindsService = exports.DataActivityFeedbacksService = exports.DataActivityExecutionModesService = exports.DataActivityCreationModesService = exports.DataActivityCategoriesService = exports.DataActivitiesService = exports.DataActionsService = exports.DataActionRolesService = exports.DataAccountsService = exports.DataAccountRolesService = exports.BffWebDataService = exports.BffMobileProfileService = exports.BffMobileNotificationsService = exports.BffMobileHomeService = exports.BffMobileDataService = exports.BffMobileAssetsService = exports.AuthService = exports.OpenAPI = exports.CancelError = exports.CancelablePromise = exports.ApiError = void 0;
+exports.OpsValidationService = exports.OpsShiftService = exports.OpsScanService = exports.OpsPointService = exports.OpsOverviewService = exports.OpsDeviceService = exports.OpsActivityService = exports.FileStorageService = exports.DataWorksService = exports.DataUserSystemRolesService = exports.DataUserInvitationsService = exports.DataSystemRolesService = exports.DataStorageTypesService = exports.DataStoragesService = exports.DataStorageItemTypesService = exports.DataStorageItemsService = exports.DataSmsOutboxStatusService = exports.DataSmsOutboxService = exports.DataShiftsService = exports.DataRolesService = exports.DataProcedureStepsService = exports.DataProceduresService = exports.DataPointStatusService = exports.DataPointsService = exports.DataPointAssetsService = exports.DataPointAllocationsService = exports.DataPagesService = exports.DataPageRolesService = exports.DataPageRoleAttributesService = exports.DataPageObjectsService = exports.DataPageObjectRolesService = exports.DataPageObjectRoleAttributesService = exports.DataPageObjectAttributesService = exports.DataPageAttributesService = exports.DataOrganizationSettingsService = exports.DataOrganizationsService = exports.DataNotificationsService = exports.DataNotificationRecipientsService = exports.DataNavigationsService = exports.DataNavigationRolesService = exports.DataModulesService = exports.DataMailOutboxStatusService = exports.DataMailOutboxService = exports.DataLocationTypesService = exports.DataLocationsService = exports.DataLicencesService = exports.DataLicencedModulesService = exports.DataJobPositionsService = exports.DataInvalidAccessAttemptsService = exports.DataInvalidAccessAttemptReasonsService = void 0;
+exports.ReportsActivitiesService = exports.RegistrationsService = void 0;
 /* generated using openapi-typescript-codegen -- do not edit */
 /* istanbul ignore file */
 /* tslint:disable */
@@ -25,6 +26,8 @@ var BffMobileNotificationsService_1 = require("./services/BffMobileNotifications
 Object.defineProperty(exports, "BffMobileNotificationsService", { enumerable: true, get: function () { return BffMobileNotificationsService_1.BffMobileNotificationsService; } });
 var BffMobileProfileService_1 = require("./services/BffMobileProfileService");
 Object.defineProperty(exports, "BffMobileProfileService", { enumerable: true, get: function () { return BffMobileProfileService_1.BffMobileProfileService; } });
+var BffWebDataService_1 = require("./services/BffWebDataService");
+Object.defineProperty(exports, "BffWebDataService", { enumerable: true, get: function () { return BffWebDataService_1.BffWebDataService; } });
 var DataAccountRolesService_1 = require("./services/DataAccountRolesService");
 Object.defineProperty(exports, "DataAccountRolesService", { enumerable: true, get: function () { return DataAccountRolesService_1.DataAccountRolesService; } });
 var DataAccountsService_1 = require("./services/DataAccountsService");
@@ -77,6 +80,8 @@ var DataAllowedAttendancePointsService_1 = require("./services/DataAllowedAttend
 Object.defineProperty(exports, "DataAllowedAttendancePointsService", { enumerable: true, get: function () { return DataAllowedAttendancePointsService_1.DataAllowedAttendancePointsService; } });
 var DataAssetActivityTypesService_1 = require("./services/DataAssetActivityTypesService");
 Object.defineProperty(exports, "DataAssetActivityTypesService", { enumerable: true, get: function () { return DataAssetActivityTypesService_1.DataAssetActivityTypesService; } });
+var DataAssetRolesService_1 = require("./services/DataAssetRolesService");
+Object.defineProperty(exports, "DataAssetRolesService", { enumerable: true, get: function () { return DataAssetRolesService_1.DataAssetRolesService; } });
 var DataAssetsService_1 = require("./services/DataAssetsService");
 Object.defineProperty(exports, "DataAssetsService", { enumerable: true, get: function () { return DataAssetsService_1.DataAssetsService; } });
 var DataAssetStatusService_1 = require("./services/DataAssetStatusService");
@@ -87,12 +92,18 @@ var DataAttachmentsService_1 = require("./services/DataAttachmentsService");
 Object.defineProperty(exports, "DataAttachmentsService", { enumerable: true, get: function () { return DataAttachmentsService_1.DataAttachmentsService; } });
 var DataAttachmentTypesService_1 = require("./services/DataAttachmentTypesService");
 Object.defineProperty(exports, "DataAttachmentTypesService", { enumerable: true, get: function () { return DataAttachmentTypesService_1.DataAttachmentTypesService; } });
+var DataCitiesService_1 = require("./services/DataCitiesService");
+Object.defineProperty(exports, "DataCitiesService", { enumerable: true, get: function () { return DataCitiesService_1.DataCitiesService; } });
+var DataCountriesService_1 = require("./services/DataCountriesService");
+Object.defineProperty(exports, "DataCountriesService", { enumerable: true, get: function () { return DataCountriesService_1.DataCountriesService; } });
 var DataDepartmentsService_1 = require("./services/DataDepartmentsService");
 Object.defineProperty(exports, "DataDepartmentsService", { enumerable: true, get: function () { return DataDepartmentsService_1.DataDepartmentsService; } });
 var DataDevicesService_1 = require("./services/DataDevicesService");
 Object.defineProperty(exports, "DataDevicesService", { enumerable: true, get: function () { return DataDevicesService_1.DataDevicesService; } });
 var DataDeviceTypesService_1 = require("./services/DataDeviceTypesService");
 Object.defineProperty(exports, "DataDeviceTypesService", { enumerable: true, get: function () { return DataDeviceTypesService_1.DataDeviceTypesService; } });
+var DataDistrictsService_1 = require("./services/DataDistrictsService");
+Object.defineProperty(exports, "DataDistrictsService", { enumerable: true, get: function () { return DataDistrictsService_1.DataDistrictsService; } });
 var DataFavoriteAssetsService_1 = require("./services/DataFavoriteAssetsService");
 Object.defineProperty(exports, "DataFavoriteAssetsService", { enumerable: true, get: function () { return DataFavoriteAssetsService_1.DataFavoriteAssetsService; } });
 var DataInvalidAccessAttemptReasonsService_1 = require("./services/DataInvalidAccessAttemptReasonsService");
@@ -115,6 +126,10 @@ var DataMailOutboxStatusService_1 = require("./services/DataMailOutboxStatusServ
 Object.defineProperty(exports, "DataMailOutboxStatusService", { enumerable: true, get: function () { return DataMailOutboxStatusService_1.DataMailOutboxStatusService; } });
 var DataModulesService_1 = require("./services/DataModulesService");
 Object.defineProperty(exports, "DataModulesService", { enumerable: true, get: function () { return DataModulesService_1.DataModulesService; } });
+var DataNavigationRolesService_1 = require("./services/DataNavigationRolesService");
+Object.defineProperty(exports, "DataNavigationRolesService", { enumerable: true, get: function () { return DataNavigationRolesService_1.DataNavigationRolesService; } });
+var DataNavigationsService_1 = require("./services/DataNavigationsService");
+Object.defineProperty(exports, "DataNavigationsService", { enumerable: true, get: function () { return DataNavigationsService_1.DataNavigationsService; } });
 var DataNotificationRecipientsService_1 = require("./services/DataNotificationRecipientsService");
 Object.defineProperty(exports, "DataNotificationRecipientsService", { enumerable: true, get: function () { return DataNotificationRecipientsService_1.DataNotificationRecipientsService; } });
 var DataNotificationsService_1 = require("./services/DataNotificationsService");
@@ -181,9 +196,17 @@ var OpsActivityService_1 = require("./services/OpsActivityService");
 Object.defineProperty(exports, "OpsActivityService", { enumerable: true, get: function () { return OpsActivityService_1.OpsActivityService; } });
 var OpsDeviceService_1 = require("./services/OpsDeviceService");
 Object.defineProperty(exports, "OpsDeviceService", { enumerable: true, get: function () { return OpsDeviceService_1.OpsDeviceService; } });
+var OpsOverviewService_1 = require("./services/OpsOverviewService");
+Object.defineProperty(exports, "OpsOverviewService", { enumerable: true, get: function () { return OpsOverviewService_1.OpsOverviewService; } });
 var OpsPointService_1 = require("./services/OpsPointService");
 Object.defineProperty(exports, "OpsPointService", { enumerable: true, get: function () { return OpsPointService_1.OpsPointService; } });
 var OpsScanService_1 = require("./services/OpsScanService");
 Object.defineProperty(exports, "OpsScanService", { enumerable: true, get: function () { return OpsScanService_1.OpsScanService; } });
+var OpsShiftService_1 = require("./services/OpsShiftService");
+Object.defineProperty(exports, "OpsShiftService", { enumerable: true, get: function () { return OpsShiftService_1.OpsShiftService; } });
+var OpsValidationService_1 = require("./services/OpsValidationService");
+Object.defineProperty(exports, "OpsValidationService", { enumerable: true, get: function () { return OpsValidationService_1.OpsValidationService; } });
 var RegistrationsService_1 = require("./services/RegistrationsService");
 Object.defineProperty(exports, "RegistrationsService", { enumerable: true, get: function () { return RegistrationsService_1.RegistrationsService; } });
+var ReportsActivitiesService_1 = require("./services/ReportsActivitiesService");
+Object.defineProperty(exports, "ReportsActivitiesService", { enumerable: true, get: function () { return ReportsActivitiesService_1.ReportsActivitiesService; } });

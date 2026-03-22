@@ -1,6 +1,6 @@
 import type { ActivityProcedureDto } from './ActivityProcedureDto';
 import type { EmptyOptions } from './EmptyOptions';
 export type ApiCommandRequestOfActivityProcedureDtoAndEmptyOptions = {
-    data: (null | ActivityProcedureDto);
+    data: ActivityProcedureDto;
     options: (null | EmptyOptions);
 };

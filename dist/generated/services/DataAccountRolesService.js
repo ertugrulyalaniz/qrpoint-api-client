@@ -12,10 +12,10 @@ class DataAccountRolesService {
      * @returns ApiResponseOfAccountRoleDto OK
      * @throws ApiError
      */
-    static postApiDataAccountRoleSCreate(xClientId, xTenantId, requestBody, acceptLanguage) {
+    static postApiDataAccountRolesCreate(xClientId, xTenantId, requestBody, acceptLanguage) {
         return (0, request_1.request)(OpenAPI_1.OpenAPI, {
             method: 'POST',
-            url: '/api/data/account-role-s/create',
+            url: '/api/data/account-roles/create',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
@@ -38,10 +38,10 @@ class DataAccountRolesService {
      * @returns ApiResponseOfAccountRoleDto OK
      * @throws ApiError
      */
-    static postApiDataAccountRoleSUpdate(xClientId, xTenantId, requestBody, acceptLanguage) {
+    static postApiDataAccountRolesUpdate(xClientId, xTenantId, requestBody, acceptLanguage) {
         return (0, request_1.request)(OpenAPI_1.OpenAPI, {
             method: 'POST',
-            url: '/api/data/account-role-s/update',
+            url: '/api/data/account-roles/update',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
@@ -64,10 +64,10 @@ class DataAccountRolesService {
      * @returns ApiResponseOfIdData OK
      * @throws ApiError
      */
-    static postApiDataAccountRoleSDelete(xClientId, xTenantId, requestBody, acceptLanguage) {
+    static postApiDataAccountRolesDelete(xClientId, xTenantId, requestBody, acceptLanguage) {
         return (0, request_1.request)(OpenAPI_1.OpenAPI, {
             method: 'POST',
-            url: '/api/data/account-role-s/delete',
+            url: '/api/data/account-roles/delete',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
@@ -90,10 +90,10 @@ class DataAccountRolesService {
      * @returns ApiResponseOfIReadOnlyListOfAccountRoleDto OK
      * @throws ApiError
      */
-    static postApiDataAccountRoleSBatch(xClientId, xTenantId, requestBody, acceptLanguage) {
+    static postApiDataAccountRolesBatch(xClientId, xTenantId, requestBody, acceptLanguage) {
         return (0, request_1.request)(OpenAPI_1.OpenAPI, {
             method: 'POST',
-            url: '/api/data/account-role-s/batch',
+            url: '/api/data/account-roles/batch',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
@@ -116,10 +116,10 @@ class DataAccountRolesService {
      * @returns ApiResponseOfIReadOnlyListOfAccountRoleDto OK
      * @throws ApiError
      */
-    static postApiDataAccountRoleSBulk(xClientId, xTenantId, requestBody, acceptLanguage) {
+    static postApiDataAccountRolesBulk(xClientId, xTenantId, requestBody, acceptLanguage) {
         return (0, request_1.request)(OpenAPI_1.OpenAPI, {
             method: 'POST',
-            url: '/api/data/account-role-s/bulk',
+            url: '/api/data/account-roles/bulk',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
@@ -142,10 +142,10 @@ class DataAccountRolesService {
      * @returns ApiResponseOfAccountRoleDto OK
      * @throws ApiError
      */
-    static postApiDataAccountRoleSGetbyid(xClientId, xTenantId, requestBody, acceptLanguage) {
+    static postApiDataAccountRolesGetbyid(xClientId, xTenantId, requestBody, acceptLanguage) {
         return (0, request_1.request)(OpenAPI_1.OpenAPI, {
             method: 'POST',
-            url: '/api/data/account-role-s/getbyid',
+            url: '/api/data/account-roles/getbyid',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
@@ -168,10 +168,10 @@ class DataAccountRolesService {
      * @returns ApiResponseOfAccountRoleDto OK
      * @throws ApiError
      */
-    static postApiDataAccountRoleSGetall(xClientId, xTenantId, requestBody, acceptLanguage) {
+    static postApiDataAccountRolesGetall(xClientId, xTenantId, requestBody, acceptLanguage) {
         return (0, request_1.request)(OpenAPI_1.OpenAPI, {
             method: 'POST',
-            url: '/api/data/account-role-s/getall',
+            url: '/api/data/account-roles/getall',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
@@ -194,10 +194,10 @@ class DataAccountRolesService {
      * @returns ApiResponseOfAccountRoleDto OK
      * @throws ApiError
      */
-    static postApiDataAccountRoleSGetpaged(xClientId, xTenantId, requestBody, acceptLanguage) {
+    static postApiDataAccountRolesGetpaged(xClientId, xTenantId, requestBody, acceptLanguage) {
         return (0, request_1.request)(OpenAPI_1.OpenAPI, {
             method: 'POST',
-            url: '/api/data/account-role-s/getpaged',
+            url: '/api/data/account-roles/getpaged',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,

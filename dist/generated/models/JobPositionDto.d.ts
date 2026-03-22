@@ -3,7 +3,6 @@ export type JobPositionDto = {
     jobPositionName?: string;
     organizationId?: number | string;
     departmentId?: number | string;
-    jobTitleId?: number | string;
     isEnabled?: boolean;
     description?: string | null;
 };

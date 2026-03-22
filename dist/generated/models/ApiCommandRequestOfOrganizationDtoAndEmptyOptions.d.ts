@@ -1,6 +1,6 @@
 import type { EmptyOptions } from './EmptyOptions';
 import type { OrganizationDto } from './OrganizationDto';
 export type ApiCommandRequestOfOrganizationDtoAndEmptyOptions = {
-    data: (null | OrganizationDto);
+    data: OrganizationDto;
     options: (null | EmptyOptions);
 };

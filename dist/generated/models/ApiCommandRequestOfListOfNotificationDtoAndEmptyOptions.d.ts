@@ -1,5 +1,6 @@
 import type { EmptyOptions } from './EmptyOptions';
+import type { NotificationDto } from './NotificationDto';
 export type ApiCommandRequestOfListOfNotificationDtoAndEmptyOptions = {
-    data: any[] | null;
+    data: Array<NotificationDto>;
     options: (null | EmptyOptions);
 };

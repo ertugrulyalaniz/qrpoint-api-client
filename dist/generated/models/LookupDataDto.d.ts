@@ -11,7 +11,10 @@ import type { AssetActivityTypeDto } from './AssetActivityTypeDto';
 import type { AssetStatusDto } from './AssetStatusDto';
 import type { AssetTypeDto } from './AssetTypeDto';
 import type { AttachmentTypeDto } from './AttachmentTypeDto';
+import type { CityDto } from './CityDto';
+import type { CountryDto } from './CountryDto';
 import type { DeviceTypeDto } from './DeviceTypeDto';
+import type { DistrictDto } from './DistrictDto';
 import type { LocationTypeDto } from './LocationTypeDto';
 import type { PointStatusDto } from './PointStatusDto';
 export type LookupDataDto = {
@@ -22,6 +25,9 @@ export type LookupDataDto = {
     activityStatus: Array<ActivityStatusDto>;
     activityTriggerTypes: Array<ActivityTriggerTypeDto>;
     activityTypes: Array<ActivityTypeDto>;
+    countries: Array<CountryDto>;
+    cities: Array<CityDto>;
+    districts: Array<DistrictDto>;
     addressTypes: Array<AddressTypeDto>;
     agreementTypes: Array<AgreementTypeDto>;
     assetActivityTypes: Array<AssetActivityTypeDto>;

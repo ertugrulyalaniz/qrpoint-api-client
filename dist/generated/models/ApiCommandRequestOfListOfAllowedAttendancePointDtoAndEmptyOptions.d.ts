@@ -1,5 +1,6 @@
+import type { AllowedAttendancePointDto } from './AllowedAttendancePointDto';
 import type { EmptyOptions } from './EmptyOptions';
 export type ApiCommandRequestOfListOfAllowedAttendancePointDtoAndEmptyOptions = {
-    data: any[] | null;
+    data: Array<AllowedAttendancePointDto>;
     options: (null | EmptyOptions);
 };

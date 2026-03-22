@@ -16,7 +16,7 @@ export declare class DataUserSystemRolesService {
      * @returns ApiResponseOfUserSystemRoleDto OK
      * @throws ApiError
      */
-    static postApiDataUserSystemRoleSCreate(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfUserSystemRoleDtoAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfUserSystemRoleDto>;
+    static postApiDataUserSystemRolesCreate(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfUserSystemRoleDtoAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfUserSystemRoleDto>;
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
      * @param xTenantId Tenant Kimliği (Zorunlu)
@@ -25,7 +25,7 @@ export declare class DataUserSystemRolesService {
      * @returns ApiResponseOfUserSystemRoleDto OK
      * @throws ApiError
      */
-    static postApiDataUserSystemRoleSUpdate(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfUserSystemRoleDtoAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfUserSystemRoleDto>;
+    static postApiDataUserSystemRolesUpdate(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfUserSystemRoleDtoAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfUserSystemRoleDto>;
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
      * @param xTenantId Tenant Kimliği (Zorunlu)
@@ -34,7 +34,7 @@ export declare class DataUserSystemRolesService {
      * @returns ApiResponseOfIdData OK
      * @throws ApiError
      */
-    static postApiDataUserSystemRoleSDelete(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfIdDataAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfIdData>;
+    static postApiDataUserSystemRolesDelete(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfIdDataAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfIdData>;
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
      * @param xTenantId Tenant Kimliği (Zorunlu)
@@ -43,7 +43,7 @@ export declare class DataUserSystemRolesService {
      * @returns ApiResponseOfIReadOnlyListOfUserSystemRoleDto OK
      * @throws ApiError
      */
-    static postApiDataUserSystemRoleSBatch(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfListOfUserSystemRoleDtoAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfIReadOnlyListOfUserSystemRoleDto>;
+    static postApiDataUserSystemRolesBatch(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfListOfUserSystemRoleDtoAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfIReadOnlyListOfUserSystemRoleDto>;
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
      * @param xTenantId Tenant Kimliği (Zorunlu)
@@ -52,7 +52,7 @@ export declare class DataUserSystemRolesService {
      * @returns ApiResponseOfIReadOnlyListOfUserSystemRoleDto OK
      * @throws ApiError
      */
-    static postApiDataUserSystemRoleSBulk(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfListOfUserSystemRoleDtoAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfIReadOnlyListOfUserSystemRoleDto>;
+    static postApiDataUserSystemRolesBulk(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfListOfUserSystemRoleDtoAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfIReadOnlyListOfUserSystemRoleDto>;
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
      * @param xTenantId Tenant Kimliği (Zorunlu)
@@ -61,7 +61,7 @@ export declare class DataUserSystemRolesService {
      * @returns ApiResponseOfUserSystemRoleDto OK
      * @throws ApiError
      */
-    static postApiDataUserSystemRoleSGetbyid(xClientId: string, xTenantId: string, requestBody: ApiQueryRequestOfIdData, acceptLanguage?: string): CancelablePromise<ApiResponseOfUserSystemRoleDto>;
+    static postApiDataUserSystemRolesGetbyid(xClientId: string, xTenantId: string, requestBody: ApiQueryRequestOfIdData, acceptLanguage?: string): CancelablePromise<ApiResponseOfUserSystemRoleDto>;
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
      * @param xTenantId Tenant Kimliği (Zorunlu)
@@ -70,7 +70,7 @@ export declare class DataUserSystemRolesService {
      * @returns ApiResponseOfUserSystemRoleDto OK
      * @throws ApiError
      */
-    static postApiDataUserSystemRoleSGetall(xClientId: string, xTenantId: string, requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfUserSystemRoleDto>;
+    static postApiDataUserSystemRolesGetall(xClientId: string, xTenantId: string, requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfUserSystemRoleDto>;
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
      * @param xTenantId Tenant Kimliği (Zorunlu)
@@ -79,5 +79,5 @@ export declare class DataUserSystemRolesService {
      * @returns ApiResponseOfUserSystemRoleDto OK
      * @throws ApiError
      */
-    static postApiDataUserSystemRoleSGetpaged(xClientId: string, xTenantId: string, requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfUserSystemRoleDto>;
+    static postApiDataUserSystemRolesGetpaged(xClientId: string, xTenantId: string, requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfUserSystemRoleDto>;
 }

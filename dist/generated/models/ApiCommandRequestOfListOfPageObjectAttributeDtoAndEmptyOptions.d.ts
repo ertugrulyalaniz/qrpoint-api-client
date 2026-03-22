@@ -1,5 +1,6 @@
 import type { EmptyOptions } from './EmptyOptions';
+import type { PageObjectAttributeDto } from './PageObjectAttributeDto';
 export type ApiCommandRequestOfListOfPageObjectAttributeDtoAndEmptyOptions = {
-    data: any[] | null;
+    data: Array<PageObjectAttributeDto>;
     options: (null | EmptyOptions);
 };
