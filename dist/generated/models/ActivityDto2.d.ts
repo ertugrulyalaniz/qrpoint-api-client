@@ -1,0 +1,23 @@
+export type ActivityDto2 = {
+    activityId: number;
+    activityTime: string;
+    activityTypeId: number;
+    occurrenceTypeId: number;
+    organizationId: number;
+    shiftId: number;
+    placeId: number;
+    openedBy: number | null;
+    assignedTo: number;
+    scheduledTime: string | null;
+    plannedDuration: number | null;
+    actualDuration: number | null;
+    pointId: number | null;
+    startedAt: string | null;
+    completedAt: string | null;
+    statusId: number;
+    enabled: boolean;
+    efficiency: number | null;
+    qualityScore: number | null;
+    comment: string | null;
+    cancellationReason: string | null;
+};
