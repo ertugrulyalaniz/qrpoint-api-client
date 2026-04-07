@@ -2,7 +2,7 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-import type { ApiCommandRequestOfStartActivityOpsData } from '../models/ApiCommandRequestOfStartActivityOpsData';
+import type { ApiCommandRequestOfEmptyDataAndEmptyOptions } from '../models/ApiCommandRequestOfEmptyDataAndEmptyOptions';
 import type { ApiResponseOfGetCurrentActivitiesResult } from '../models/ApiResponseOfGetCurrentActivitiesResult';
 import type { CancelablePromise } from '../core/CancelablePromise';
 import { OpenAPI } from '../core/OpenAPI';
@@ -19,7 +19,7 @@ export class ReportsActivitiesService {
     public static postApiReportsActivitiesGetCurrentActivities(
         xClientId: string,
         xTenantId: string,
-        requestBody: ApiCommandRequestOfStartActivityOpsData,
+        requestBody: ApiCommandRequestOfEmptyDataAndEmptyOptions,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfGetCurrentActivitiesResult> {
         return __request(OpenAPI, {
@@ -35,7 +35,6 @@ export class ReportsActivitiesService {
             errors: {
                 400: `Bad Request`,
                 401: `Unauthorized`,
-                404: `Not Found`,
             },
         });
     }

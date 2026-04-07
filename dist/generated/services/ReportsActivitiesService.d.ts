@@ -1,4 +1,4 @@
-import type { ApiCommandRequestOfStartActivityOpsData } from '../models/ApiCommandRequestOfStartActivityOpsData';
+import type { ApiCommandRequestOfEmptyDataAndEmptyOptions } from '../models/ApiCommandRequestOfEmptyDataAndEmptyOptions';
 import type { ApiResponseOfGetCurrentActivitiesResult } from '../models/ApiResponseOfGetCurrentActivitiesResult';
 import type { CancelablePromise } from '../core/CancelablePromise';
 export declare class ReportsActivitiesService {
@@ -10,5 +10,5 @@ export declare class ReportsActivitiesService {
      * @returns ApiResponseOfGetCurrentActivitiesResult OK
      * @throws ApiError
      */
-    static postApiReportsActivitiesGetCurrentActivities(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfStartActivityOpsData, acceptLanguage?: string): CancelablePromise<ApiResponseOfGetCurrentActivitiesResult>;
+    static postApiReportsActivitiesGetCurrentActivities(xClientId: string, xTenantId: string, requestBody: ApiCommandRequestOfEmptyDataAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfGetCurrentActivitiesResult>;
 }

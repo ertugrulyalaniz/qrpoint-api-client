@@ -2,7 +2,8 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
+import type { ActivityDto } from './ActivityDto';
 export type GetCurrentActivitiesResult = {
-    started: boolean;
+    activities: Array<ActivityDto>;
 };
 

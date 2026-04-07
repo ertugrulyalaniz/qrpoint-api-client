@@ -1,3 +1,4 @@
+import type { ActivityDto } from './ActivityDto';
 export type GetCurrentActivitiesResult = {
-    started: boolean;
+    activities: Array<ActivityDto>;
 };

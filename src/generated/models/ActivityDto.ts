@@ -13,7 +13,9 @@ export type ActivityDto = {
     occurrenceTypeId?: number | string;
     organizationId?: number | string;
     shiftId?: number | string;
+    pointId?: number | string | null;
     assetId?: number | string;
+    demandId?: number | string | null;
     assignedTo?: number | string | null;
     openedBy?: number | string | null;
     approvedBy?: number | string | null;
@@ -24,7 +26,6 @@ export type ActivityDto = {
     expireDuration?: string | null;
     plannedDuration?: string | null;
     actualDuration?: string | null;
-    pointId?: number | string | null;
     startedAt?: any;
     completedAt?: any;
     cancelledAt?: any;

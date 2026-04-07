@@ -1,3 +1,3 @@
 export type OverviewOpsResult = {
-    validated: boolean;
+    found: boolean;
 };

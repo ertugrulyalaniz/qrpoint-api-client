@@ -3,6 +3,6 @@
 /* tslint:disable */
 /* eslint-disable */
 export type ConfirmOpsResult = {
-    validated: boolean;
+    confirmed: boolean;
 };
 

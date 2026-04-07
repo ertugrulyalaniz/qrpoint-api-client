@@ -1,4 +1,4 @@
 export type CancelActivityOpsData = {
-    activityId: number | string;
+    pointId: number | string;
     cancellationReason: string;
 };

@@ -1,3 +1,4 @@
 export type StartActivityOpsData = {
-    activityId: number | string;
+    pointId: number | string;
+    activityType: string;
 };

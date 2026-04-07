@@ -1,4 +1,7 @@
 import type { AssetDto } from './AssetDto';
+import type { DemandCategoryAssetTypeDto } from './DemandCategoryAssetTypeDto';
+import type { DemandCategoryDto } from './DemandCategoryDto';
+import type { DemandDto } from './DemandDto';
 import type { DepartmentDto } from './DepartmentDto';
 import type { DeviceDto } from './DeviceDto';
 import type { FavoriteAssetDto } from './FavoriteAssetDto';
@@ -14,6 +17,9 @@ import type { ShiftDto } from './ShiftDto';
 import type { WorkDto } from './WorkDto';
 export type MasterDataDto = {
     assets: Array<AssetDto>;
+    demandCategoryAssetTypes: Array<DemandCategoryAssetTypeDto>;
+    demands: Array<DemandDto>;
+    demandCategories: Array<DemandCategoryDto>;
     departments: Array<DepartmentDto>;
     devices: Array<DeviceDto>;
     favoriteAssets: Array<FavoriteAssetDto>;

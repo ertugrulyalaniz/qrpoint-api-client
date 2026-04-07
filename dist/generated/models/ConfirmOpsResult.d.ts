@@ -1,3 +1,3 @@
 export type ConfirmOpsResult = {
-    validated: boolean;
+    confirmed: boolean;
 };

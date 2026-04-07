@@ -1,4 +1,4 @@
 export type CompleteActivityOpsData = {
-    activityId: number | string;
+    pointId: number | string;
     comment: string;
 };
