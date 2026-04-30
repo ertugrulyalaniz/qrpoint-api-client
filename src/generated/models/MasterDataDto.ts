@@ -2,6 +2,7 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
+import type { AssetCategoryDto } from './AssetCategoryDto';
 import type { AssetDto } from './AssetDto';
 import type { DemandCategoryAssetTypeDto } from './DemandCategoryAssetTypeDto';
 import type { DemandCategoryDto } from './DemandCategoryDto';
@@ -21,6 +22,7 @@ import type { ShiftDto } from './ShiftDto';
 import type { WorkDto } from './WorkDto';
 export type MasterDataDto = {
     assets: Array<AssetDto>;
+    assetCategories: Array<AssetCategoryDto>;
     demandCategoryAssetTypes: Array<DemandCategoryAssetTypeDto>;
     demands: Array<DemandDto>;
     demandCategories: Array<DemandCategoryDto>;

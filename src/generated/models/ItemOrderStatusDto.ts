@@ -2,10 +2,9 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-export type AssetActivityTypeDto = {
-    assetActivityTypeId?: number | string;
-    activityTypeId?: number | string;
-    assetTypeId?: number | string;
+export type ItemOrderStatusDto = {
+    itemOrderStatusId?: number | string;
+    itemOrderStatusName?: string;
     isEnabled?: boolean;
 };
 

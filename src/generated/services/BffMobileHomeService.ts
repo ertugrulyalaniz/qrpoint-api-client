@@ -2,7 +2,6 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-import type { LoginPinRequestApiRequest } from '../models/LoginPinRequestApiRequest';
 import type { CancelablePromise } from '../core/CancelablePromise';
 import { OpenAPI } from '../core/OpenAPI';
 import { request as __request } from '../core/request';
@@ -10,7 +9,6 @@ export class BffMobileHomeService {
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
      * @param xTenantId Tenant Kimliği (Zorunlu)
-     * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
      * @returns string OK
      * @throws ApiError
@@ -18,7 +16,6 @@ export class BffMobileHomeService {
     public static postApiBffMobileHomeGetall(
         xClientId: string,
         xTenantId: string,
-        requestBody: LoginPinRequestApiRequest,
         acceptLanguage?: string,
     ): CancelablePromise<string> {
         return __request(OpenAPI, {
@@ -29,8 +26,6 @@ export class BffMobileHomeService {
                 'x-client-id': xClientId,
                 'x-tenant-id': xTenantId,
             },
-            body: requestBody,
-            mediaType: 'application/json',
             errors: {
                 400: `Bad Request`,
                 401: `Unauthorized`,

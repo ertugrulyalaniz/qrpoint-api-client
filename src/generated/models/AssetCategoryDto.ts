@@ -2,14 +2,11 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-export type AssetDto = {
-    assetId?: number | string;
-    assetName?: string;
-    assetTypeId?: number | string;
+export type AssetCategoryDto = {
+    assetCategoryId?: number | string;
+    assetCategoryName?: string;
     organizationId?: number | string;
-    categoryId?: number | string | null;
-    locationId?: number | string | null;
-    statusId?: number | string;
+    procedureId?: number | string | null;
     isEnabled?: boolean;
     description?: string | null;
 };

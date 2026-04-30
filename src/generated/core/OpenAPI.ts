@@ -20,7 +20,7 @@ export type OpenAPIConfig = {
 };
 
 export const OpenAPI: OpenAPIConfig = {
-    BASE: 'https://api.qrpoint.com.tr:6202',
+    BASE: 'https://api.qrpoint.com.tr:6201',
     VERSION: '1',
     WITH_CREDENTIALS: false,
     CREDENTIALS: 'include',

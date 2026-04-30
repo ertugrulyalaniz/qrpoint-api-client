@@ -2,113 +2,93 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-import type { ApiQueryRequestOfGuidData } from '../models/ApiQueryRequestOfGuidData';
-import type { ApiResponseOfEmptyData } from '../models/ApiResponseOfEmptyData';
-import type { ApiResponseOfUploadFileResult } from '../models/ApiResponseOfUploadFileResult';
+import type { ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions } from '../models/ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions';
+import type { ApiQueryRequestOfIdData } from '../models/ApiQueryRequestOfIdData';
+import type { ApiResponseOfItemOrderStatusDto } from '../models/ApiResponseOfItemOrderStatusDto';
 import type { CancelablePromise } from '../core/CancelablePromise';
 import { OpenAPI } from '../core/OpenAPI';
 import { request as __request } from '../core/request';
-export class FileStorageService {
+export class DataItemOrderStatusService {
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
-     * @param formData
-     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
-     * @returns ApiResponseOfUploadFileResult OK
-     * @throws ApiError
-     */
-    public static postApiFileStorageUpload(
-        xClientId: string,
-        xTenantId: string,
-        formData: ({
-            ContentType?: string;
-            ContentDisposition?: string;
-            Headers?: Record<string, Array<string>>;
-            Length?: number | string;
-            Name?: string;
-            FileName?: string;
-        } & {
-            itemGuid?: string;
-        } & {
-            itemTypeId?: number | string;
-        } & {
-            isTemp?: boolean;
-        }),
-        acceptLanguage?: string,
-    ): CancelablePromise<ApiResponseOfUploadFileResult> {
-        return __request(OpenAPI, {
-            method: 'POST',
-            url: '/api/file-storage/upload',
-            headers: {
-                'accept-language': acceptLanguage,
-                'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
-            },
-            formData: formData,
-            mediaType: 'application/x-www-form-urlencoded',
-            errors: {
-                400: `Bad Request`,
-                404: `Not Found`,
-            },
-        });
-    }
-    /**
-     * @param id
-     * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
-     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
-     * @returns any OK
-     * @throws ApiError
-     */
-    public static getApiFileStorage(
-        id: string,
-        xClientId: string,
-        xTenantId: string,
-        acceptLanguage?: string,
-    ): CancelablePromise<any> {
-        return __request(OpenAPI, {
-            method: 'GET',
-            url: '/api/file-storage/{id}',
-            path: {
-                'id': id,
-            },
-            headers: {
-                'accept-language': acceptLanguage,
-                'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
-            },
-            errors: {
-                400: `Bad Request`,
-                404: `Not Found`,
-            },
-        });
-    }
-    /**
-     * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
-     * @returns ApiResponseOfEmptyData OK
+     * @returns ApiResponseOfItemOrderStatusDto OK
      * @throws ApiError
      */
-    public static postApiFileStorageCommit(
+    public static postApiDataItemOrderStatusGetbyid(
         xClientId: string,
-        xTenantId: string,
-        requestBody: ApiQueryRequestOfGuidData,
+        requestBody: ApiQueryRequestOfIdData,
         acceptLanguage?: string,
-    ): CancelablePromise<ApiResponseOfEmptyData> {
+    ): CancelablePromise<ApiResponseOfItemOrderStatusDto> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/file-storage/commit',
+            url: '/api/data/item-order-status/getbyid',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
             errors: {
                 400: `Bad Request`,
+                401: `Unauthorized`,
+                404: `Not Found`,
+            },
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param requestBody
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfItemOrderStatusDto OK
+     * @throws ApiError
+     */
+    public static postApiDataItemOrderStatusGetall(
+        xClientId: string,
+        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfItemOrderStatusDto> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/item-order-status/getall',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+            errors: {
+                400: `Bad Request`,
+                401: `Unauthorized`,
+                404: `Not Found`,
+            },
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param requestBody
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfItemOrderStatusDto OK
+     * @throws ApiError
+     */
+    public static postApiDataItemOrderStatusGetpaged(
+        xClientId: string,
+        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfItemOrderStatusDto> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/item-order-status/getpaged',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+            errors: {
+                400: `Bad Request`,
+                401: `Unauthorized`,
                 404: `Not Found`,
             },
         });
