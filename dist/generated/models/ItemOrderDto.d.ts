@@ -1,0 +1,21 @@
+export type ItemOrderDto = {
+    itemOrderId?: number | string;
+    orderNo?: string;
+    organizationId?: number | string;
+    accountId?: number | string;
+    itemCartId?: number | string | null;
+    itemOrderStatusId?: number | string;
+    currencyCode?: string;
+    subtotal?: number | string;
+    discountTotal?: number | string;
+    taxTotal?: number | string;
+    grandTotal?: number | string;
+    billingAddressId?: number | string | null;
+    shippingAddressId?: number | string | null;
+    orderedAt?: string;
+    approvedAt?: string | null;
+    cancelledAt?: string | null;
+    completedAt?: string | null;
+    isEnabled?: boolean;
+    description?: string | null;
+};

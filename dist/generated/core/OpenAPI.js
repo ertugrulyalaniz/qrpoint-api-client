@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.OpenAPI = void 0;
 exports.OpenAPI = {
-    BASE: 'https://api.qrpoint.com.tr:6202',
+    BASE: 'https://api.qrpoint.com.tr:6201',
     VERSION: '1',
     WITH_CREDENTIALS: false,
     CREDENTIALS: 'include',

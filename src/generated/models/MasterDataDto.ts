@@ -11,6 +11,7 @@ import type { DepartmentDto } from './DepartmentDto';
 import type { DeviceDto } from './DeviceDto';
 import type { FavoriteAssetDto } from './FavoriteAssetDto';
 import type { JobPositionDto } from './JobPositionDto';
+import type { LocationAccountDto } from './LocationAccountDto';
 import type { LocationDto } from './LocationDto';
 import type { OrganizationSettingDto } from './OrganizationSettingDto';
 import type { PointAllocationDto } from './PointAllocationDto';
@@ -30,6 +31,7 @@ export type MasterDataDto = {
     devices: Array<DeviceDto>;
     favoriteAssets: Array<FavoriteAssetDto>;
     jobPositions: Array<JobPositionDto>;
+    locationAccounts: Array<LocationAccountDto>;
     locations: Array<LocationDto>;
     organizationSettings: Array<OrganizationSettingDto>;
     pointAllocations: Array<PointAllocationDto>;

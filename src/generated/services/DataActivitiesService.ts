@@ -5,7 +5,7 @@
 import type { ApiCommandRequestOfActivityDtoAndEmptyOptions } from '../models/ApiCommandRequestOfActivityDtoAndEmptyOptions';
 import type { ApiCommandRequestOfIdDataAndEmptyOptions } from '../models/ApiCommandRequestOfIdDataAndEmptyOptions';
 import type { ApiCommandRequestOfListOfActivityDtoAndEmptyOptions } from '../models/ApiCommandRequestOfListOfActivityDtoAndEmptyOptions';
-import type { ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions } from '../models/ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions';
+import type { ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndEmptySortAndEmptyOptions } from '../models/ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndEmptySortAndEmptyOptions';
 import type { ApiQueryRequestOfIdData } from '../models/ApiQueryRequestOfIdData';
 import type { ApiResponseOfActivityDto } from '../models/ApiResponseOfActivityDto';
 import type { ApiResponseOfIdData } from '../models/ApiResponseOfIdData';
@@ -242,7 +242,7 @@ export class DataActivitiesService {
     public static postApiDataActivitiesGetall(
         xClientId: string,
         xTenantId: string,
-        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions,
+        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndEmptySortAndEmptyOptions,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfActivityDto> {
         return __request(OpenAPI, {
@@ -273,7 +273,7 @@ export class DataActivitiesService {
     public static postApiDataActivitiesGetpaged(
         xClientId: string,
         xTenantId: string,
-        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions,
+        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndEmptySortAndEmptyOptions,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfActivityDto> {
         return __request(OpenAPI, {

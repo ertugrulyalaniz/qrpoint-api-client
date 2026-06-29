@@ -1,7 +1,7 @@
 import type { ApiCommandRequestOfActivityDtoAndEmptyOptions } from '../models/ApiCommandRequestOfActivityDtoAndEmptyOptions';
 import type { ApiCommandRequestOfIdDataAndEmptyOptions } from '../models/ApiCommandRequestOfIdDataAndEmptyOptions';
 import type { ApiCommandRequestOfListOfActivityDtoAndEmptyOptions } from '../models/ApiCommandRequestOfListOfActivityDtoAndEmptyOptions';
-import type { ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions } from '../models/ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions';
+import type { ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndEmptySortAndEmptyOptions } from '../models/ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndEmptySortAndEmptyOptions';
 import type { ApiQueryRequestOfIdData } from '../models/ApiQueryRequestOfIdData';
 import type { ApiResponseOfActivityDto } from '../models/ApiResponseOfActivityDto';
 import type { ApiResponseOfIdData } from '../models/ApiResponseOfIdData';
@@ -79,7 +79,7 @@ export declare class DataActivitiesService {
      * @returns ApiResponseOfActivityDto OK
      * @throws ApiError
      */
-    static postApiDataActivitiesGetall(xClientId: string, xTenantId: string, requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfActivityDto>;
+    static postApiDataActivitiesGetall(xClientId: string, xTenantId: string, requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndEmptySortAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfActivityDto>;
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
      * @param xTenantId Tenant Kimliği (Zorunlu)
@@ -88,5 +88,5 @@ export declare class DataActivitiesService {
      * @returns ApiResponseOfActivityDto OK
      * @throws ApiError
      */
-    static postApiDataActivitiesGetpaged(xClientId: string, xTenantId: string, requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfActivityDto>;
+    static postApiDataActivitiesGetpaged(xClientId: string, xTenantId: string, requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndEmptySortAndEmptyOptions, acceptLanguage?: string): CancelablePromise<ApiResponseOfActivityDto>;
 }

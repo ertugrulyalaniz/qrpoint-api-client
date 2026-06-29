@@ -19,6 +19,8 @@ export declare class FileStorageService {
         Name?: string;
         FileName?: string;
     } & {
+        itemGuid?: string;
+    } & {
         itemTypeId?: number | string;
     } & {
         isTemp?: boolean;
