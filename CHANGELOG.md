@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/ertugrulyalaniz/qrpoint-api-client/compare/v1.0.23...v1.1.0) (2026-06-29)
+
+
+### Features
+
+* add LocationAccounts endpoints and sync generated client ([2bedd47](https://github.com/ertugrulyalaniz/qrpoint-api-client/commit/2bedd474a1c1bd19dd0715ae84b6ad7ff80ae75f))
+
 ### [1.0.23](https://github.com/ertugrulyalaniz/qrpoint-api-client/compare/v1.0.22...v1.0.23) (2026-04-30)
 
 ### [1.0.22](https://github.com/ertugrulyalaniz/qrpoint-api-client/compare/v1.0.21...v1.0.22) (2026-04-30)
