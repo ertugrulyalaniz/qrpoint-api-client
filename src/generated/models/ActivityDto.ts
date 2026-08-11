@@ -11,6 +11,7 @@ export type ActivityDto = {
     activityRuleId?: number | string;
     creationModeId?: number | string;
     occurrenceTypeId?: number | string;
+    relatedActivityId?: number | string | null;
     organizationId?: number | string;
     shiftId?: number | string;
     pointId?: number | string | null;
@@ -29,11 +30,13 @@ export type ActivityDto = {
     startedAt?: any;
     completedAt?: any;
     cancelledAt?: any;
+    postponedAt?: any;
     statusId?: number | string;
     isEnabled?: boolean;
     efficiency?: number | string | null;
     qualityScore?: number | string | null;
     comment?: string | null;
     cancellationReason?: string | null;
+    postponedReason?: string | null;
 };
 

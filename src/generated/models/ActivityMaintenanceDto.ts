@@ -2,10 +2,11 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-export type AttachmentTypeDto = {
+export type ActivityMaintenanceDto = {
+    activityMaintenanceId?: number | string;
     organizationId?: number | string;
-    attachmentTypeId?: number | string;
-    attachmentTypeName?: string;
+    activityId?: number | string;
+    maintenanceTypeId?: number | string;
     isEnabled?: boolean;
 };
 

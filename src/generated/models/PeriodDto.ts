@@ -2,10 +2,13 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-export type AttachmentTypeDto = {
+export type PeriodDto = {
     organizationId?: number | string;
-    attachmentTypeId?: number | string;
-    attachmentTypeName?: string;
+    periodId?: number | string;
+    periodName?: string;
+    interval?: number | string;
+    intervalUnitId?: number | string;
     isEnabled?: boolean;
+    description?: string | null;
 };
 

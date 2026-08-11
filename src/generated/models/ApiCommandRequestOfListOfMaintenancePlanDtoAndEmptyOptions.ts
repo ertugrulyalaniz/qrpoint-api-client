@@ -2,10 +2,10 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-import type { AttachmentDto } from './AttachmentDto';
 import type { EmptyOptions } from './EmptyOptions';
-export type ApiCommandRequestOfAttachmentDtoAndEmptyOptions = {
-    data: AttachmentDto;
+import type { MaintenancePlanDto } from './MaintenancePlanDto';
+export type ApiCommandRequestOfListOfMaintenancePlanDtoAndEmptyOptions = {
+    data: Array<MaintenancePlanDto>;
     options: (null | EmptyOptions);
 };
 

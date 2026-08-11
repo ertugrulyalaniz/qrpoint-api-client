@@ -7,6 +7,8 @@ export type DemandCategoryDto = {
     demandCategoryName?: string;
     organizationId?: number | string;
     parentId?: number | string | null;
+    isAutoSetLocationResponsible?: boolean;
+    allowSelectResponisbleOnScreen?: boolean;
     isEnabled?: boolean;
     description?: string | null;
 };

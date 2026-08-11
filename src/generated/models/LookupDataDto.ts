@@ -15,11 +15,16 @@ import type { AssetActivityTypeDto } from './AssetActivityTypeDto';
 import type { AssetStatusDto } from './AssetStatusDto';
 import type { AssetTypeDto } from './AssetTypeDto';
 import type { AttachmentTypeDto } from './AttachmentTypeDto';
+import type { BrandDto } from './BrandDto';
+import type { BrandModelDto } from './BrandModelDto';
 import type { CityDto } from './CityDto';
 import type { CountryDto } from './CountryDto';
 import type { DeviceTypeDto } from './DeviceTypeDto';
 import type { DistrictDto } from './DistrictDto';
+import type { IntervalUnitDto } from './IntervalUnitDto';
 import type { LocationTypeDto } from './LocationTypeDto';
+import type { MaintenanceTypeDto } from './MaintenanceTypeDto';
+import type { PeriodDto } from './PeriodDto';
 import type { PointStatusDto } from './PointStatusDto';
 export type LookupDataDto = {
     activityCreationModes: Array<ActivityCreationModeDto>;
@@ -38,6 +43,11 @@ export type LookupDataDto = {
     assetStatus: Array<AssetStatusDto>;
     assetTypes: Array<AssetTypeDto>;
     attachmentTypes: Array<AttachmentTypeDto>;
+    brands: Array<BrandDto>;
+    brandModels: Array<BrandModelDto>;
+    maintenanceTypes: Array<MaintenanceTypeDto>;
+    intervalUnits: Array<IntervalUnitDto>;
+    periods: Array<PeriodDto>;
     deviceTypes: Array<DeviceTypeDto>;
     locationTypes: Array<LocationTypeDto>;
     pointStatus: Array<PointStatusDto>;

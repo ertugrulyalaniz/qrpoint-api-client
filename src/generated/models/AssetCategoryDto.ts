@@ -6,6 +6,7 @@ export type AssetCategoryDto = {
     assetCategoryId?: number | string;
     assetCategoryName?: string;
     organizationId?: number | string;
+    parentId?: number | string | null;
     procedureId?: number | string | null;
     isEnabled?: boolean;
     description?: string | null;

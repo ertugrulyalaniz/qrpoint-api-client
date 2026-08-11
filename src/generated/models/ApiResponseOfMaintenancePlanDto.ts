@@ -2,10 +2,10 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-import type { AttachmentDto } from './AttachmentDto';
-export type ApiResponseOfAttachmentDto = {
+import type { MaintenancePlanDto } from './MaintenancePlanDto';
+export type ApiResponseOfMaintenancePlanDto = {
     statusCode: number | string;
     message: string;
-    data: (null | AttachmentDto);
+    data: (null | MaintenancePlanDto);
 };
 

@@ -2,9 +2,10 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-export type ApiResponseOfIReadOnlyListOfAttachmentDto = {
+import type { CalibrationPlanDto } from './CalibrationPlanDto';
+export type ApiResponseOfCalibrationPlanDto = {
     statusCode: number | string;
     message: string;
-    data: any[] | null;
+    data: (null | CalibrationPlanDto);
 };
 
