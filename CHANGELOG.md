@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/ertugrulyalaniz/qrpoint-api-client/compare/v1.2.0...v2.0.0) (2026-09-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* the default baseURL is now https://api.qrpoint.com.tr:6201
+instead of http://api.qrpoint.com.tr:6202. The old default was plain HTTP and
+was blocked as mixed content in HTTPS web apps. Apps that pass baseURL
+explicitly are unaffected.
+* **api:** 5 services and 24 models were removed from the backend spec.
+
+### Features
+
+* **api:** sync client with backend (1403 endpoints, 885 models) ([784d7fb](https://github.com/ertugrulyalaniz/qrpoint-api-client/commit/784d7fbfbcb9e7cb80ce65fe3a177e4d797fe739))
+* dual ESM/CJS build, 401 refresh hook, normalized errors ([15f9955](https://github.com/ertugrulyalaniz/qrpoint-api-client/commit/15f99559465c44693c9f4faf1f9b73d4a4aa6986))
+
 ## [1.2.0](https://github.com/ertugrulyalaniz/qrpoint-api-client/compare/v1.1.0...v1.2.0) (2026-08-11)
 
 
