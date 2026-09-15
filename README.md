@@ -46,7 +46,7 @@ import {
 
 // Configure once at app startup (e.g., in App.tsx)
 configureQrPointClient({
-  baseURL: 'https://api.qrpoint.com.tr:6202',
+  baseURL: 'https://api.qrpoint.com.tr:6201',
   getClientId: getExpoDeviceId,
   getToken: async () => {
     // Return your auth token from storage
@@ -78,7 +78,7 @@ import {
 
 // Configure once at app startup (e.g., in _app.tsx or layout.tsx)
 configureQrPointClient({
-  baseURL: 'https://api.qrpoint.com.tr:6202',
+  baseURL: 'https://api.qrpoint.com.tr:6201',
   getClientId: getWebDeviceId,
   getToken: () => {
     // Return your auth token from cookies, localStorage, etc.
@@ -109,7 +109,7 @@ Configure the API client with your settings.
 interface QrPointClientConfig {
   /**
    * Base URL of your API.
-   * Default: http://api.qrpoint.com.tr:6202
+   * Default: https://api.qrpoint.com.tr:6201
    */
   baseURL?: string;
 
@@ -142,7 +142,53 @@ interface QrPointClientConfig {
    * Whether to send cookies (mainly for web).
    */
   withCredentials?: boolean;
+
+  /**
+   * Called when a request comes back 401. Return a fresh token to have the
+   * original request retried once with it, or undefined to let the 401 through.
+   * Concurrent 401s share a single call.
+   */
+  onUnauthorized?: () => Promise<string | undefined> | string | undefined;
+
+  /**
+   * Called for every failed request, after any refresh attempt.
+   * Useful for centralized logging or toasts.
+   */
+  onError?: (error: QrPointError) => void;
 }
+```
+
+### Automatic token refresh
+
+`onUnauthorized` turns a 401 into a transparent retry. If ten requests fail at
+the same time, it runs **once** and all ten retry with the same new token. A
+retried request is never retried twice, so a genuinely dead session fails fast
+instead of looping.
+
+```typescript
+configureQrPointClient({
+  baseURL: 'https://api.qrpoint.com.tr:6201',
+  getToken: () => useAuthStore.getState().accessToken,
+  onUnauthorized: async () => {
+    const refreshToken = useAuthStore.getState().refreshToken;
+    if (!refreshToken) return undefined;
+
+    try {
+      const response = await AuthService.postApiAuthRefreshToken({
+        requestBody: { refreshToken },
+      });
+      const token = response.data?.accessToken;
+      if (token) useAuthStore.getState().setAccessToken(token);
+      return token;
+    } catch {
+      useAuthStore.getState().logout();
+      return undefined;
+    }
+  },
+  onError: (error) => {
+    if (error.isNetworkError) toast.error('Bağlantı yok');
+  },
+});
 ```
 
 ---
@@ -409,22 +455,40 @@ const activity = await ActivitiesService.postApiActivities({
 
 ### Error Handling
 
+`toQrPointError` normalizes anything a call can throw — an `ApiResponseOf*`
+envelope, a `ProblemDetails` payload, a plain string, or a network failure —
+into one shape, so UI code never has to branch on the backend's error format.
+
 ```typescript
-import { AuthService, ApiError } from '@qrpoint/api-client';
+import { AuthService, toQrPointError } from '@qrpoint/api-client';
 
 try {
-  const response = await AuthService.postApiAuthLogin({
-    email: 'user@example.com',
-    password: 'wrong-password',
+  await AuthService.postApiAuthLogin({
+    requestBody: { email: 'user@example.com', password: 'wrong-password' },
   });
-} catch (error) {
-  if (error instanceof ApiError) {
-    console.error('API Error:', error.status, error.message);
-    console.error('Response:', error.body);
-  } else {
-    console.error('Unexpected error:', error);
-  }
+} catch (e) {
+  const error = toQrPointError(e);
+
+  // { status, message, isNetworkError, validationErrors?, body?, cause }
+  if (error.isNetworkError) toast.error('Bağlantı yok');
+  else if (error.validationErrors) setFormErrors(error.validationErrors);
+  else toast.error(error.message);
 }
+```
+
+Type guards are exported for the common cases:
+
+```typescript
+import {
+  isApiError,
+  isUnauthorizedError,
+  isForbiddenError,
+  isNotFoundError,
+  ApiError,
+} from '@qrpoint/api-client';
+
+if (isUnauthorizedError(error)) redirectToLogin();
+if (isNotFoundError(error)) show404();
 ```
 
 ---
@@ -514,19 +578,52 @@ function PlacesList() {
 
 ## Development
 
-### Regenerate API Client
+### Sync with the backend
 
-To regenerate the API client from the OpenAPI spec:
+One command fetches the live OpenAPI spec, diffs it against the last sync,
+regenerates the client, builds both bundles, and commits:
 
 ```bash
-npm run generate:api
+npm run sync
+```
+
+The commit message is derived from the API delta, which is what drives the
+version bump:
+
+| Spec delta                  | Commit type   | Version bump |
+| --------------------------- | ------------- | ------------ |
+| Endpoints or models removed | `feat(api)!`  | major        |
+| Endpoints or models added   | `feat(api)`   | minor        |
+| Type-only changes           | `fix(api)`    | patch        |
+
+`api-surface.json` is the committed snapshot of the last sync (endpoint list,
+model list, spec hash). When the spec hash is unchanged, `sync` exits without
+touching anything.
+
+Flags: `--dry` (report only, no codegen), `--no-commit`, `--force` (regenerate
+even if the spec is unchanged), `--url=<spec url>`. The spec URL can also come
+from `QRPOINT_OPENAPI_URL`.
+
+```bash
+npm run sync:dry     # what changed on the backend, without touching the repo
+```
+
+### Release
+
+```bash
+npm run release      # sync + standard-version (bump, CHANGELOG, tag) + push + publish
 ```
 
 ### Build
 
 ```bash
-npm run build
+npm run build        # tsc -> dist/*.js (CJS) + tsup -> dist/index.mjs (ESM)
+npm run smoke        # loads both outputs and checks the public surface
 ```
+
+The package ships dual CJS/ESM. The ESM bundle is what lets bundlers drop the
+services you do not import: an app that imports only `AuthService` bundles
+**~8 KB instead of ~355 KB**.
 
 ---
 

@@ -9,7 +9,9 @@
     "sync": "node scripts/sync-api.mjs",
     "sync:dry": "node scripts/sync-api.mjs --dry",
     "generate:raw": "openapi --input https://api.qrpoint.com.tr:6201/openapi/v1.json --output ./src/generated --client axios",
-    "build": "tsc",
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "tsc",
+    "build:esm": "tsup",
     "smoke": "node smoke.js",
     "prepublishOnly": "npm run build && npm run smoke",
     "release": "npm run sync && standard-version && git push --follow-tags && npm publish"
@@ -24,9 +26,11 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
       "require": "./dist/index.js",
       "default": "./dist/index.js"
-    }
+    },
+    "./package.json": "./package.json"
   },
   "files": [
     "dist/"
@@ -36,9 +40,9 @@
     "axios": "^1.13.2"
   },
   "peerDependencies": {
+    "@react-native-async-storage/async-storage": "*",
     "expo-application": "*",
-    "expo-secure-store": "*",
-    "@react-native-async-storage/async-storage": "*"
+    "expo-secure-store": "*"
   },
   "peerDependenciesMeta": {
     "expo-application": {
@@ -55,6 +59,8 @@
     "@types/node": "^24.10.1",
     "openapi-typescript-codegen": "^0.29.0",
     "standard-version": "^9.5.0",
+    "tsup": "^8.5.1",
     "typescript": "^5.9.3"
-  }
+  },
+  "module": "dist/index.mjs"
 }
