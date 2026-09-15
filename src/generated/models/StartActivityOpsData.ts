@@ -3,7 +3,9 @@
 /* tslint:disable */
 /* eslint-disable */
 export type StartActivityOpsData = {
+    activityId: number | string | null;
     pointId: number | string;
-    activityType: string;
+    activityType: string | null;
+    activityTypeId: number | string | null;
 };
 

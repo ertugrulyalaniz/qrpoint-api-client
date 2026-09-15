@@ -4,10 +4,13 @@
 /* eslint-disable */
 import type { ApiCommandRequestOfCalibrationPlanDtoAndEmptyOptions } from '../models/ApiCommandRequestOfCalibrationPlanDtoAndEmptyOptions';
 import type { ApiCommandRequestOfIdDataAndEmptyOptions } from '../models/ApiCommandRequestOfIdDataAndEmptyOptions';
+import type { ApiCommandRequestOfListOfCalibrationPlanDtoAndBatchCommandOptions } from '../models/ApiCommandRequestOfListOfCalibrationPlanDtoAndBatchCommandOptions';
 import type { ApiCommandRequestOfListOfCalibrationPlanDtoAndEmptyOptions } from '../models/ApiCommandRequestOfListOfCalibrationPlanDtoAndEmptyOptions';
-import type { ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions } from '../models/ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions';
+import type { ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions } from '../models/ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions';
 import type { ApiQueryRequestOfIdData } from '../models/ApiQueryRequestOfIdData';
+import type { ApiQueryRequestOfIdsData } from '../models/ApiQueryRequestOfIdsData';
 import type { ApiResponseOfCalibrationPlanDto } from '../models/ApiResponseOfCalibrationPlanDto';
+import type { ApiResponseOfEntityStatisticsDto } from '../models/ApiResponseOfEntityStatisticsDto';
 import type { ApiResponseOfIdData } from '../models/ApiResponseOfIdData';
 import type { ApiResponseOfIReadOnlyListOfCalibrationPlanDto } from '../models/ApiResponseOfIReadOnlyListOfCalibrationPlanDto';
 import type { ApiResponseOfPagedResultOfCalibrationPlanDto } from '../models/ApiResponseOfPagedResultOfCalibrationPlanDto';
@@ -15,6 +18,121 @@ import type { CancelablePromise } from '../core/CancelablePromise';
 import { OpenAPI } from '../core/OpenAPI';
 import { request as __request } from '../core/request';
 export class DataCalibrationPlansService {
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param requestBody
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfCalibrationPlanDto OK
+     * @throws ApiError
+     */
+    public static postApiDataCalibrationPlansDeletedGetbyid(
+        xClientId: string,
+        requestBody: ApiQueryRequestOfIdData,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfCalibrationPlanDto> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/calibration-plans/deleted/getbyid',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param requestBody
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfIReadOnlyListOfCalibrationPlanDto OK
+     * @throws ApiError
+     */
+    public static postApiDataCalibrationPlansDeletedGetall(
+        xClientId: string,
+        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfIReadOnlyListOfCalibrationPlanDto> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/calibration-plans/deleted/getall',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param requestBody
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfPagedResultOfCalibrationPlanDto OK
+     * @throws ApiError
+     */
+    public static postApiDataCalibrationPlansDeletedGetpaged(
+        xClientId: string,
+        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfPagedResultOfCalibrationPlanDto> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/calibration-plans/deleted/getpaged',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param requestBody
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfIdData OK
+     * @throws ApiError
+     */
+    public static postApiDataCalibrationPlansDeletedRestore(
+        xClientId: string,
+        requestBody: ApiCommandRequestOfIdDataAndEmptyOptions,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfIdData> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/calibration-plans/deleted/restore',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param requestBody
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfIdData OK
+     * @throws ApiError
+     */
+    public static postApiDataCalibrationPlansDeletedDelete(
+        xClientId: string,
+        requestBody: ApiCommandRequestOfIdDataAndEmptyOptions,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfIdData> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/calibration-plans/deleted/delete',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
      * @param requestBody
@@ -93,7 +211,7 @@ export class DataCalibrationPlansService {
      */
     public static postApiDataCalibrationPlansBatch(
         xClientId: string,
-        requestBody: ApiCommandRequestOfListOfCalibrationPlanDtoAndEmptyOptions,
+        requestBody: ApiCommandRequestOfListOfCalibrationPlanDtoAndBatchCommandOptions,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfIReadOnlyListOfCalibrationPlanDto> {
         return __request(OpenAPI, {
@@ -160,9 +278,32 @@ export class DataCalibrationPlansService {
      * @returns ApiResponseOfIReadOnlyListOfCalibrationPlanDto OK
      * @throws ApiError
      */
+    public static postApiDataCalibrationPlansGetbyids(
+        xClientId: string,
+        requestBody: ApiQueryRequestOfIdsData,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfIReadOnlyListOfCalibrationPlanDto> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/calibration-plans/getbyids',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param requestBody
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfIReadOnlyListOfCalibrationPlanDto OK
+     * @throws ApiError
+     */
     public static postApiDataCalibrationPlansGetall(
         xClientId: string,
-        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions,
+        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfIReadOnlyListOfCalibrationPlanDto> {
         return __request(OpenAPI, {
@@ -185,7 +326,7 @@ export class DataCalibrationPlansService {
      */
     public static postApiDataCalibrationPlansGetpaged(
         xClientId: string,
-        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions,
+        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfPagedResultOfCalibrationPlanDto> {
         return __request(OpenAPI, {
@@ -197,6 +338,25 @@ export class DataCalibrationPlansService {
             },
             body: requestBody,
             mediaType: 'application/json',
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfEntityStatisticsDto OK
+     * @throws ApiError
+     */
+    public static postApiDataCalibrationPlansGetstatistics(
+        xClientId: string,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfEntityStatisticsDto> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/calibration-plans/getstatistics',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
         });
     }
 }

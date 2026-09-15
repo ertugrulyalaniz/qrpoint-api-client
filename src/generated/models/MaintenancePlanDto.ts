@@ -7,7 +7,6 @@ export type MaintenancePlanDto = {
     maintenancePlanId?: number | string;
     maintenancePlanName?: string;
     assetId?: number | string;
-    maintenanceTypeId?: number | string;
     periodId?: number | string;
     startDate?: any;
     lastScheduledDate?: any;

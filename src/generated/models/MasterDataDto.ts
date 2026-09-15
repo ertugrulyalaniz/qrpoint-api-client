@@ -2,7 +2,6 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-import type { ActivityMaintenanceDto } from './ActivityMaintenanceDto';
 import type { AssetCategoryDto } from './AssetCategoryDto';
 import type { AssetDto } from './AssetDto';
 import type { CalibrationPlanDto } from './CalibrationPlanDto';
@@ -16,6 +15,7 @@ import type { JobPositionDto } from './JobPositionDto';
 import type { LocationAccountDto } from './LocationAccountDto';
 import type { LocationDto } from './LocationDto';
 import type { MaintenancePlanDto } from './MaintenancePlanDto';
+import type { MaintenancePlanStepDto } from './MaintenancePlanStepDto';
 import type { OrganizationSettingDto } from './OrganizationSettingDto';
 import type { PointAllocationDto } from './PointAllocationDto';
 import type { PointAssetDto } from './PointAssetDto';
@@ -25,11 +25,11 @@ import type { RoleDto } from './RoleDto';
 import type { ShiftDto } from './ShiftDto';
 import type { WorkDto } from './WorkDto';
 export type MasterDataDto = {
-    activityMaintenances: Array<ActivityMaintenanceDto>;
     assets: Array<AssetDto>;
     assetCategories: Array<AssetCategoryDto>;
     calibrationPlans: Array<CalibrationPlanDto>;
     maintenancePlans: Array<MaintenancePlanDto>;
+    maintenancePlanSteps: Array<MaintenancePlanStepDto>;
     demandCategoryAssetTypes: Array<DemandCategoryAssetTypeDto>;
     demands: Array<DemandDto>;
     demandCategories: Array<DemandCategoryDto>;

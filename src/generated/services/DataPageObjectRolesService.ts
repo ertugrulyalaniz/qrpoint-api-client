@@ -3,12 +3,16 @@
 /* tslint:disable */
 /* eslint-disable */
 import type { ApiCommandRequestOfIdDataAndEmptyOptions } from '../models/ApiCommandRequestOfIdDataAndEmptyOptions';
+import type { ApiCommandRequestOfListOfPageObjectRoleDtoAndBatchCommandOptions } from '../models/ApiCommandRequestOfListOfPageObjectRoleDtoAndBatchCommandOptions';
 import type { ApiCommandRequestOfListOfPageObjectRoleDtoAndEmptyOptions } from '../models/ApiCommandRequestOfListOfPageObjectRoleDtoAndEmptyOptions';
 import type { ApiCommandRequestOfPageObjectRoleDtoAndEmptyOptions } from '../models/ApiCommandRequestOfPageObjectRoleDtoAndEmptyOptions';
-import type { ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions } from '../models/ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions';
+import type { ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions } from '../models/ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions';
 import type { ApiQueryRequestOfIdData } from '../models/ApiQueryRequestOfIdData';
+import type { ApiQueryRequestOfIdsData } from '../models/ApiQueryRequestOfIdsData';
+import type { ApiResponseOfEntityStatisticsDto } from '../models/ApiResponseOfEntityStatisticsDto';
 import type { ApiResponseOfIdData } from '../models/ApiResponseOfIdData';
 import type { ApiResponseOfIReadOnlyListOfPageObjectRoleDto } from '../models/ApiResponseOfIReadOnlyListOfPageObjectRoleDto';
+import type { ApiResponseOfPagedResultOfPageObjectRoleDto } from '../models/ApiResponseOfPagedResultOfPageObjectRoleDto';
 import type { ApiResponseOfPageObjectRoleDto } from '../models/ApiResponseOfPageObjectRoleDto';
 import type { CancelablePromise } from '../core/CancelablePromise';
 import { OpenAPI } from '../core/OpenAPI';
@@ -16,7 +20,121 @@ import { request as __request } from '../core/request';
 export class DataPageObjectRolesService {
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
+     * @param requestBody
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfPageObjectRoleDto OK
+     * @throws ApiError
+     */
+    public static postApiDataPageObjectRolesDeletedGetbyid(
+        xClientId: string,
+        requestBody: ApiQueryRequestOfIdData,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfPageObjectRoleDto> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/page-object-roles/deleted/getbyid',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param requestBody
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfIReadOnlyListOfPageObjectRoleDto OK
+     * @throws ApiError
+     */
+    public static postApiDataPageObjectRolesDeletedGetall(
+        xClientId: string,
+        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfIReadOnlyListOfPageObjectRoleDto> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/page-object-roles/deleted/getall',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param requestBody
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfPagedResultOfPageObjectRoleDto OK
+     * @throws ApiError
+     */
+    public static postApiDataPageObjectRolesDeletedGetpaged(
+        xClientId: string,
+        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfPagedResultOfPageObjectRoleDto> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/page-object-roles/deleted/getpaged',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param requestBody
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfIdData OK
+     * @throws ApiError
+     */
+    public static postApiDataPageObjectRolesDeletedRestore(
+        xClientId: string,
+        requestBody: ApiCommandRequestOfIdDataAndEmptyOptions,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfIdData> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/page-object-roles/deleted/restore',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param requestBody
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfIdData OK
+     * @throws ApiError
+     */
+    public static postApiDataPageObjectRolesDeletedDelete(
+        xClientId: string,
+        requestBody: ApiCommandRequestOfIdDataAndEmptyOptions,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfIdData> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/page-object-roles/deleted/delete',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
      * @returns ApiResponseOfPageObjectRoleDto OK
@@ -24,7 +142,6 @@ export class DataPageObjectRolesService {
      */
     public static postApiDataPageObjectRolesCreate(
         xClientId: string,
-        xTenantId: string,
         requestBody: ApiCommandRequestOfPageObjectRoleDtoAndEmptyOptions,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfPageObjectRoleDto> {
@@ -34,20 +151,13 @@ export class DataPageObjectRolesService {
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                401: `Unauthorized`,
-                404: `Not Found`,
-            },
         });
     }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
      * @returns ApiResponseOfPageObjectRoleDto OK
@@ -55,7 +165,6 @@ export class DataPageObjectRolesService {
      */
     public static postApiDataPageObjectRolesUpdate(
         xClientId: string,
-        xTenantId: string,
         requestBody: ApiCommandRequestOfPageObjectRoleDtoAndEmptyOptions,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfPageObjectRoleDto> {
@@ -65,20 +174,13 @@ export class DataPageObjectRolesService {
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                401: `Unauthorized`,
-                404: `Not Found`,
-            },
         });
     }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
      * @returns ApiResponseOfIdData OK
@@ -86,7 +188,6 @@ export class DataPageObjectRolesService {
      */
     public static postApiDataPageObjectRolesDelete(
         xClientId: string,
-        xTenantId: string,
         requestBody: ApiCommandRequestOfIdDataAndEmptyOptions,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfIdData> {
@@ -96,20 +197,13 @@ export class DataPageObjectRolesService {
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                401: `Unauthorized`,
-                404: `Not Found`,
-            },
         });
     }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
      * @returns ApiResponseOfIReadOnlyListOfPageObjectRoleDto OK
@@ -117,8 +211,7 @@ export class DataPageObjectRolesService {
      */
     public static postApiDataPageObjectRolesBatch(
         xClientId: string,
-        xTenantId: string,
-        requestBody: ApiCommandRequestOfListOfPageObjectRoleDtoAndEmptyOptions,
+        requestBody: ApiCommandRequestOfListOfPageObjectRoleDtoAndBatchCommandOptions,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfIReadOnlyListOfPageObjectRoleDto> {
         return __request(OpenAPI, {
@@ -127,20 +220,13 @@ export class DataPageObjectRolesService {
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                401: `Unauthorized`,
-                404: `Not Found`,
-            },
         });
     }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
      * @returns ApiResponseOfIReadOnlyListOfPageObjectRoleDto OK
@@ -148,7 +234,6 @@ export class DataPageObjectRolesService {
      */
     public static postApiDataPageObjectRolesBulk(
         xClientId: string,
-        xTenantId: string,
         requestBody: ApiCommandRequestOfListOfPageObjectRoleDtoAndEmptyOptions,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfIReadOnlyListOfPageObjectRoleDto> {
@@ -158,20 +243,13 @@ export class DataPageObjectRolesService {
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                401: `Unauthorized`,
-                404: `Not Found`,
-            },
         });
     }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
      * @returns ApiResponseOfPageObjectRoleDto OK
@@ -179,7 +257,6 @@ export class DataPageObjectRolesService {
      */
     public static postApiDataPageObjectRolesGetbyid(
         xClientId: string,
-        xTenantId: string,
         requestBody: ApiQueryRequestOfIdData,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfPageObjectRoleDto> {
@@ -189,76 +266,96 @@ export class DataPageObjectRolesService {
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                401: `Unauthorized`,
-                404: `Not Found`,
-            },
         });
     }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
-     * @returns ApiResponseOfPageObjectRoleDto OK
+     * @returns ApiResponseOfIReadOnlyListOfPageObjectRoleDto OK
+     * @throws ApiError
+     */
+    public static postApiDataPageObjectRolesGetbyids(
+        xClientId: string,
+        requestBody: ApiQueryRequestOfIdsData,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfIReadOnlyListOfPageObjectRoleDto> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/page-object-roles/getbyids',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param requestBody
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfIReadOnlyListOfPageObjectRoleDto OK
      * @throws ApiError
      */
     public static postApiDataPageObjectRolesGetall(
         xClientId: string,
-        xTenantId: string,
-        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions,
+        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions,
         acceptLanguage?: string,
-    ): CancelablePromise<ApiResponseOfPageObjectRoleDto> {
+    ): CancelablePromise<ApiResponseOfIReadOnlyListOfPageObjectRoleDto> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/api/data/page-object-roles/getall',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                401: `Unauthorized`,
-                404: `Not Found`,
-            },
         });
     }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
-     * @returns ApiResponseOfPageObjectRoleDto OK
+     * @returns ApiResponseOfPagedResultOfPageObjectRoleDto OK
      * @throws ApiError
      */
     public static postApiDataPageObjectRolesGetpaged(
         xClientId: string,
-        xTenantId: string,
-        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions,
+        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions,
         acceptLanguage?: string,
-    ): CancelablePromise<ApiResponseOfPageObjectRoleDto> {
+    ): CancelablePromise<ApiResponseOfPagedResultOfPageObjectRoleDto> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/api/data/page-object-roles/getpaged',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                401: `Unauthorized`,
-                404: `Not Found`,
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfEntityStatisticsDto OK
+     * @throws ApiError
+     */
+    public static postApiDataPageObjectRolesGetstatistics(
+        xClientId: string,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfEntityStatisticsDto> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/page-object-roles/getstatistics',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
             },
         });
     }

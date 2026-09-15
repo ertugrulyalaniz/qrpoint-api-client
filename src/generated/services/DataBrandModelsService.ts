@@ -4,10 +4,13 @@
 /* eslint-disable */
 import type { ApiCommandRequestOfBrandModelDtoAndEmptyOptions } from '../models/ApiCommandRequestOfBrandModelDtoAndEmptyOptions';
 import type { ApiCommandRequestOfIdDataAndEmptyOptions } from '../models/ApiCommandRequestOfIdDataAndEmptyOptions';
+import type { ApiCommandRequestOfListOfBrandModelDtoAndBatchCommandOptions } from '../models/ApiCommandRequestOfListOfBrandModelDtoAndBatchCommandOptions';
 import type { ApiCommandRequestOfListOfBrandModelDtoAndEmptyOptions } from '../models/ApiCommandRequestOfListOfBrandModelDtoAndEmptyOptions';
-import type { ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions } from '../models/ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions';
+import type { ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions } from '../models/ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions';
 import type { ApiQueryRequestOfIdData } from '../models/ApiQueryRequestOfIdData';
+import type { ApiQueryRequestOfIdsData } from '../models/ApiQueryRequestOfIdsData';
 import type { ApiResponseOfBrandModelDto } from '../models/ApiResponseOfBrandModelDto';
+import type { ApiResponseOfEntityStatisticsDto } from '../models/ApiResponseOfEntityStatisticsDto';
 import type { ApiResponseOfIdData } from '../models/ApiResponseOfIdData';
 import type { ApiResponseOfIReadOnlyListOfBrandModelDto } from '../models/ApiResponseOfIReadOnlyListOfBrandModelDto';
 import type { ApiResponseOfPagedResultOfBrandModelDto } from '../models/ApiResponseOfPagedResultOfBrandModelDto';
@@ -15,6 +18,121 @@ import type { CancelablePromise } from '../core/CancelablePromise';
 import { OpenAPI } from '../core/OpenAPI';
 import { request as __request } from '../core/request';
 export class DataBrandModelsService {
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param requestBody
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfBrandModelDto OK
+     * @throws ApiError
+     */
+    public static postApiDataBrandModelsDeletedGetbyid(
+        xClientId: string,
+        requestBody: ApiQueryRequestOfIdData,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfBrandModelDto> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/brand-models/deleted/getbyid',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param requestBody
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfIReadOnlyListOfBrandModelDto OK
+     * @throws ApiError
+     */
+    public static postApiDataBrandModelsDeletedGetall(
+        xClientId: string,
+        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfIReadOnlyListOfBrandModelDto> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/brand-models/deleted/getall',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param requestBody
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfPagedResultOfBrandModelDto OK
+     * @throws ApiError
+     */
+    public static postApiDataBrandModelsDeletedGetpaged(
+        xClientId: string,
+        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfPagedResultOfBrandModelDto> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/brand-models/deleted/getpaged',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param requestBody
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfIdData OK
+     * @throws ApiError
+     */
+    public static postApiDataBrandModelsDeletedRestore(
+        xClientId: string,
+        requestBody: ApiCommandRequestOfIdDataAndEmptyOptions,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfIdData> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/brand-models/deleted/restore',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param requestBody
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfIdData OK
+     * @throws ApiError
+     */
+    public static postApiDataBrandModelsDeletedDelete(
+        xClientId: string,
+        requestBody: ApiCommandRequestOfIdDataAndEmptyOptions,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfIdData> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/brand-models/deleted/delete',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
      * @param requestBody
@@ -93,7 +211,7 @@ export class DataBrandModelsService {
      */
     public static postApiDataBrandModelsBatch(
         xClientId: string,
-        requestBody: ApiCommandRequestOfListOfBrandModelDtoAndEmptyOptions,
+        requestBody: ApiCommandRequestOfListOfBrandModelDtoAndBatchCommandOptions,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfIReadOnlyListOfBrandModelDto> {
         return __request(OpenAPI, {
@@ -160,9 +278,32 @@ export class DataBrandModelsService {
      * @returns ApiResponseOfIReadOnlyListOfBrandModelDto OK
      * @throws ApiError
      */
+    public static postApiDataBrandModelsGetbyids(
+        xClientId: string,
+        requestBody: ApiQueryRequestOfIdsData,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfIReadOnlyListOfBrandModelDto> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/brand-models/getbyids',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param requestBody
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfIReadOnlyListOfBrandModelDto OK
+     * @throws ApiError
+     */
     public static postApiDataBrandModelsGetall(
         xClientId: string,
-        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions,
+        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfIReadOnlyListOfBrandModelDto> {
         return __request(OpenAPI, {
@@ -185,7 +326,7 @@ export class DataBrandModelsService {
      */
     public static postApiDataBrandModelsGetpaged(
         xClientId: string,
-        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions,
+        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfPagedResultOfBrandModelDto> {
         return __request(OpenAPI, {
@@ -197,6 +338,25 @@ export class DataBrandModelsService {
             },
             body: requestBody,
             mediaType: 'application/json',
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfEntityStatisticsDto OK
+     * @throws ApiError
+     */
+    public static postApiDataBrandModelsGetstatistics(
+        xClientId: string,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfEntityStatisticsDto> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/brand-models/getstatistics',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
         });
     }
 }

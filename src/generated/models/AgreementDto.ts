@@ -6,7 +6,7 @@ export type AgreementDto = {
     agreementId?: number | string;
     agreementTypeId?: number | string;
     userId?: number | string;
-    accountId?: number | string | null;
+    accountId?: number | string;
     isEnabled?: boolean;
     expireTime?: any;
     isExpired?: boolean;

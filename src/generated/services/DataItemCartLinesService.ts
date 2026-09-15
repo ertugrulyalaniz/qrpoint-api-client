@@ -4,19 +4,137 @@
 /* eslint-disable */
 import type { ApiCommandRequestOfIdDataAndEmptyOptions } from '../models/ApiCommandRequestOfIdDataAndEmptyOptions';
 import type { ApiCommandRequestOfItemCartLineDtoAndEmptyOptions } from '../models/ApiCommandRequestOfItemCartLineDtoAndEmptyOptions';
+import type { ApiCommandRequestOfListOfItemCartLineDtoAndBatchCommandOptions } from '../models/ApiCommandRequestOfListOfItemCartLineDtoAndBatchCommandOptions';
 import type { ApiCommandRequestOfListOfItemCartLineDtoAndEmptyOptions } from '../models/ApiCommandRequestOfListOfItemCartLineDtoAndEmptyOptions';
-import type { ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions } from '../models/ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions';
+import type { ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions } from '../models/ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions';
 import type { ApiQueryRequestOfIdData } from '../models/ApiQueryRequestOfIdData';
+import type { ApiQueryRequestOfIdsData } from '../models/ApiQueryRequestOfIdsData';
+import type { ApiResponseOfEntityStatisticsDto } from '../models/ApiResponseOfEntityStatisticsDto';
 import type { ApiResponseOfIdData } from '../models/ApiResponseOfIdData';
 import type { ApiResponseOfIReadOnlyListOfItemCartLineDto } from '../models/ApiResponseOfIReadOnlyListOfItemCartLineDto';
 import type { ApiResponseOfItemCartLineDto } from '../models/ApiResponseOfItemCartLineDto';
+import type { ApiResponseOfPagedResultOfItemCartLineDto } from '../models/ApiResponseOfPagedResultOfItemCartLineDto';
 import type { CancelablePromise } from '../core/CancelablePromise';
 import { OpenAPI } from '../core/OpenAPI';
 import { request as __request } from '../core/request';
 export class DataItemCartLinesService {
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
+     * @param requestBody
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfItemCartLineDto OK
+     * @throws ApiError
+     */
+    public static postApiDataItemcartlinesDeletedGetbyid(
+        xClientId: string,
+        requestBody: ApiQueryRequestOfIdData,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfItemCartLineDto> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/itemcartlines/deleted/getbyid',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param requestBody
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfIReadOnlyListOfItemCartLineDto OK
+     * @throws ApiError
+     */
+    public static postApiDataItemcartlinesDeletedGetall(
+        xClientId: string,
+        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfIReadOnlyListOfItemCartLineDto> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/itemcartlines/deleted/getall',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param requestBody
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfPagedResultOfItemCartLineDto OK
+     * @throws ApiError
+     */
+    public static postApiDataItemcartlinesDeletedGetpaged(
+        xClientId: string,
+        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfPagedResultOfItemCartLineDto> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/itemcartlines/deleted/getpaged',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param requestBody
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfIdData OK
+     * @throws ApiError
+     */
+    public static postApiDataItemcartlinesDeletedRestore(
+        xClientId: string,
+        requestBody: ApiCommandRequestOfIdDataAndEmptyOptions,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfIdData> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/itemcartlines/deleted/restore',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param requestBody
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfIdData OK
+     * @throws ApiError
+     */
+    public static postApiDataItemcartlinesDeletedDelete(
+        xClientId: string,
+        requestBody: ApiCommandRequestOfIdDataAndEmptyOptions,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfIdData> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/itemcartlines/deleted/delete',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
      * @returns ApiResponseOfItemCartLineDto OK
@@ -24,7 +142,6 @@ export class DataItemCartLinesService {
      */
     public static postApiDataItemcartlinesCreate(
         xClientId: string,
-        xTenantId: string,
         requestBody: ApiCommandRequestOfItemCartLineDtoAndEmptyOptions,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfItemCartLineDto> {
@@ -34,20 +151,13 @@ export class DataItemCartLinesService {
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                401: `Unauthorized`,
-                404: `Not Found`,
-            },
         });
     }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
      * @returns ApiResponseOfItemCartLineDto OK
@@ -55,7 +165,6 @@ export class DataItemCartLinesService {
      */
     public static postApiDataItemcartlinesUpdate(
         xClientId: string,
-        xTenantId: string,
         requestBody: ApiCommandRequestOfItemCartLineDtoAndEmptyOptions,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfItemCartLineDto> {
@@ -65,20 +174,13 @@ export class DataItemCartLinesService {
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                401: `Unauthorized`,
-                404: `Not Found`,
-            },
         });
     }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
      * @returns ApiResponseOfIdData OK
@@ -86,7 +188,6 @@ export class DataItemCartLinesService {
      */
     public static postApiDataItemcartlinesDelete(
         xClientId: string,
-        xTenantId: string,
         requestBody: ApiCommandRequestOfIdDataAndEmptyOptions,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfIdData> {
@@ -96,20 +197,13 @@ export class DataItemCartLinesService {
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                401: `Unauthorized`,
-                404: `Not Found`,
-            },
         });
     }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
      * @returns ApiResponseOfIReadOnlyListOfItemCartLineDto OK
@@ -117,8 +211,7 @@ export class DataItemCartLinesService {
      */
     public static postApiDataItemcartlinesBatch(
         xClientId: string,
-        xTenantId: string,
-        requestBody: ApiCommandRequestOfListOfItemCartLineDtoAndEmptyOptions,
+        requestBody: ApiCommandRequestOfListOfItemCartLineDtoAndBatchCommandOptions,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfIReadOnlyListOfItemCartLineDto> {
         return __request(OpenAPI, {
@@ -127,20 +220,13 @@ export class DataItemCartLinesService {
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                401: `Unauthorized`,
-                404: `Not Found`,
-            },
         });
     }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
      * @returns ApiResponseOfIReadOnlyListOfItemCartLineDto OK
@@ -148,7 +234,6 @@ export class DataItemCartLinesService {
      */
     public static postApiDataItemcartlinesBulk(
         xClientId: string,
-        xTenantId: string,
         requestBody: ApiCommandRequestOfListOfItemCartLineDtoAndEmptyOptions,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfIReadOnlyListOfItemCartLineDto> {
@@ -158,20 +243,13 @@ export class DataItemCartLinesService {
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                401: `Unauthorized`,
-                404: `Not Found`,
-            },
         });
     }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
      * @returns ApiResponseOfItemCartLineDto OK
@@ -179,7 +257,6 @@ export class DataItemCartLinesService {
      */
     public static postApiDataItemcartlinesGetbyid(
         xClientId: string,
-        xTenantId: string,
         requestBody: ApiQueryRequestOfIdData,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfItemCartLineDto> {
@@ -189,76 +266,96 @@ export class DataItemCartLinesService {
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                401: `Unauthorized`,
-                404: `Not Found`,
-            },
         });
     }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
-     * @returns ApiResponseOfItemCartLineDto OK
+     * @returns ApiResponseOfIReadOnlyListOfItemCartLineDto OK
+     * @throws ApiError
+     */
+    public static postApiDataItemcartlinesGetbyids(
+        xClientId: string,
+        requestBody: ApiQueryRequestOfIdsData,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfIReadOnlyListOfItemCartLineDto> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/itemcartlines/getbyids',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param requestBody
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfIReadOnlyListOfItemCartLineDto OK
      * @throws ApiError
      */
     public static postApiDataItemcartlinesGetall(
         xClientId: string,
-        xTenantId: string,
-        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions,
+        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions,
         acceptLanguage?: string,
-    ): CancelablePromise<ApiResponseOfItemCartLineDto> {
+    ): CancelablePromise<ApiResponseOfIReadOnlyListOfItemCartLineDto> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/api/data/itemcartlines/getall',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                401: `Unauthorized`,
-                404: `Not Found`,
-            },
         });
     }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
-     * @returns ApiResponseOfItemCartLineDto OK
+     * @returns ApiResponseOfPagedResultOfItemCartLineDto OK
      * @throws ApiError
      */
     public static postApiDataItemcartlinesGetpaged(
         xClientId: string,
-        xTenantId: string,
-        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions,
+        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions,
         acceptLanguage?: string,
-    ): CancelablePromise<ApiResponseOfItemCartLineDto> {
+    ): CancelablePromise<ApiResponseOfPagedResultOfItemCartLineDto> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/api/data/itemcartlines/getpaged',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                401: `Unauthorized`,
-                404: `Not Found`,
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfEntityStatisticsDto OK
+     * @throws ApiError
+     */
+    public static postApiDataItemcartlinesGetstatistics(
+        xClientId: string,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfEntityStatisticsDto> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/itemcartlines/getstatistics',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
             },
         });
     }

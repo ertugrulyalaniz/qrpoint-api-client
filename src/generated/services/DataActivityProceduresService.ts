@@ -4,19 +4,137 @@
 /* eslint-disable */
 import type { ApiCommandRequestOfActivityProcedureDtoAndEmptyOptions } from '../models/ApiCommandRequestOfActivityProcedureDtoAndEmptyOptions';
 import type { ApiCommandRequestOfIdDataAndEmptyOptions } from '../models/ApiCommandRequestOfIdDataAndEmptyOptions';
+import type { ApiCommandRequestOfListOfActivityProcedureDtoAndBatchCommandOptions } from '../models/ApiCommandRequestOfListOfActivityProcedureDtoAndBatchCommandOptions';
 import type { ApiCommandRequestOfListOfActivityProcedureDtoAndEmptyOptions } from '../models/ApiCommandRequestOfListOfActivityProcedureDtoAndEmptyOptions';
-import type { ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions } from '../models/ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions';
+import type { ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions } from '../models/ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions';
 import type { ApiQueryRequestOfIdData } from '../models/ApiQueryRequestOfIdData';
+import type { ApiQueryRequestOfIdsData } from '../models/ApiQueryRequestOfIdsData';
 import type { ApiResponseOfActivityProcedureDto } from '../models/ApiResponseOfActivityProcedureDto';
+import type { ApiResponseOfEntityStatisticsDto } from '../models/ApiResponseOfEntityStatisticsDto';
 import type { ApiResponseOfIdData } from '../models/ApiResponseOfIdData';
 import type { ApiResponseOfIReadOnlyListOfActivityProcedureDto } from '../models/ApiResponseOfIReadOnlyListOfActivityProcedureDto';
+import type { ApiResponseOfPagedResultOfActivityProcedureDto } from '../models/ApiResponseOfPagedResultOfActivityProcedureDto';
 import type { CancelablePromise } from '../core/CancelablePromise';
 import { OpenAPI } from '../core/OpenAPI';
 import { request as __request } from '../core/request';
 export class DataActivityProceduresService {
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
+     * @param requestBody
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfActivityProcedureDto OK
+     * @throws ApiError
+     */
+    public static postApiDataActivityProceduresDeletedGetbyid(
+        xClientId: string,
+        requestBody: ApiQueryRequestOfIdData,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfActivityProcedureDto> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/activity-procedures/deleted/getbyid',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param requestBody
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfIReadOnlyListOfActivityProcedureDto OK
+     * @throws ApiError
+     */
+    public static postApiDataActivityProceduresDeletedGetall(
+        xClientId: string,
+        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfIReadOnlyListOfActivityProcedureDto> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/activity-procedures/deleted/getall',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param requestBody
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfPagedResultOfActivityProcedureDto OK
+     * @throws ApiError
+     */
+    public static postApiDataActivityProceduresDeletedGetpaged(
+        xClientId: string,
+        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfPagedResultOfActivityProcedureDto> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/activity-procedures/deleted/getpaged',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param requestBody
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfIdData OK
+     * @throws ApiError
+     */
+    public static postApiDataActivityProceduresDeletedRestore(
+        xClientId: string,
+        requestBody: ApiCommandRequestOfIdDataAndEmptyOptions,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfIdData> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/activity-procedures/deleted/restore',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param requestBody
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfIdData OK
+     * @throws ApiError
+     */
+    public static postApiDataActivityProceduresDeletedDelete(
+        xClientId: string,
+        requestBody: ApiCommandRequestOfIdDataAndEmptyOptions,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfIdData> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/activity-procedures/deleted/delete',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
      * @returns ApiResponseOfActivityProcedureDto OK
@@ -24,7 +142,6 @@ export class DataActivityProceduresService {
      */
     public static postApiDataActivityProceduresCreate(
         xClientId: string,
-        xTenantId: string,
         requestBody: ApiCommandRequestOfActivityProcedureDtoAndEmptyOptions,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfActivityProcedureDto> {
@@ -34,20 +151,13 @@ export class DataActivityProceduresService {
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                401: `Unauthorized`,
-                404: `Not Found`,
-            },
         });
     }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
      * @returns ApiResponseOfActivityProcedureDto OK
@@ -55,7 +165,6 @@ export class DataActivityProceduresService {
      */
     public static postApiDataActivityProceduresUpdate(
         xClientId: string,
-        xTenantId: string,
         requestBody: ApiCommandRequestOfActivityProcedureDtoAndEmptyOptions,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfActivityProcedureDto> {
@@ -65,19 +174,13 @@ export class DataActivityProceduresService {
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                404: `Not Found`,
-            },
         });
     }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
      * @returns ApiResponseOfIdData OK
@@ -85,7 +188,6 @@ export class DataActivityProceduresService {
      */
     public static postApiDataActivityProceduresDelete(
         xClientId: string,
-        xTenantId: string,
         requestBody: ApiCommandRequestOfIdDataAndEmptyOptions,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfIdData> {
@@ -95,19 +197,13 @@ export class DataActivityProceduresService {
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                404: `Not Found`,
-            },
         });
     }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
      * @returns ApiResponseOfIReadOnlyListOfActivityProcedureDto OK
@@ -115,8 +211,7 @@ export class DataActivityProceduresService {
      */
     public static postApiDataActivityProceduresBatch(
         xClientId: string,
-        xTenantId: string,
-        requestBody: ApiCommandRequestOfListOfActivityProcedureDtoAndEmptyOptions,
+        requestBody: ApiCommandRequestOfListOfActivityProcedureDtoAndBatchCommandOptions,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfIReadOnlyListOfActivityProcedureDto> {
         return __request(OpenAPI, {
@@ -125,19 +220,13 @@ export class DataActivityProceduresService {
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                404: `Not Found`,
-            },
         });
     }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
      * @returns ApiResponseOfIReadOnlyListOfActivityProcedureDto OK
@@ -145,7 +234,6 @@ export class DataActivityProceduresService {
      */
     public static postApiDataActivityProceduresBulk(
         xClientId: string,
-        xTenantId: string,
         requestBody: ApiCommandRequestOfListOfActivityProcedureDtoAndEmptyOptions,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfIReadOnlyListOfActivityProcedureDto> {
@@ -155,19 +243,13 @@ export class DataActivityProceduresService {
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                404: `Not Found`,
-            },
         });
     }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
      * @returns ApiResponseOfActivityProcedureDto OK
@@ -175,7 +257,6 @@ export class DataActivityProceduresService {
      */
     public static postApiDataActivityProceduresGetbyid(
         xClientId: string,
-        xTenantId: string,
         requestBody: ApiQueryRequestOfIdData,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfActivityProcedureDto> {
@@ -185,74 +266,96 @@ export class DataActivityProceduresService {
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                401: `Unauthorized`,
-                404: `Not Found`,
-            },
         });
     }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
-     * @returns ApiResponseOfActivityProcedureDto OK
+     * @returns ApiResponseOfIReadOnlyListOfActivityProcedureDto OK
+     * @throws ApiError
+     */
+    public static postApiDataActivityProceduresGetbyids(
+        xClientId: string,
+        requestBody: ApiQueryRequestOfIdsData,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfIReadOnlyListOfActivityProcedureDto> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/activity-procedures/getbyids',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param requestBody
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfIReadOnlyListOfActivityProcedureDto OK
      * @throws ApiError
      */
     public static postApiDataActivityProceduresGetall(
         xClientId: string,
-        xTenantId: string,
-        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions,
+        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions,
         acceptLanguage?: string,
-    ): CancelablePromise<ApiResponseOfActivityProcedureDto> {
+    ): CancelablePromise<ApiResponseOfIReadOnlyListOfActivityProcedureDto> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/api/data/activity-procedures/getall',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                404: `Not Found`,
-            },
         });
     }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
-     * @returns ApiResponseOfActivityProcedureDto OK
+     * @returns ApiResponseOfPagedResultOfActivityProcedureDto OK
      * @throws ApiError
      */
     public static postApiDataActivityProceduresGetpaged(
         xClientId: string,
-        xTenantId: string,
-        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions,
+        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions,
         acceptLanguage?: string,
-    ): CancelablePromise<ApiResponseOfActivityProcedureDto> {
+    ): CancelablePromise<ApiResponseOfPagedResultOfActivityProcedureDto> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/api/data/activity-procedures/getpaged',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                404: `Not Found`,
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfEntityStatisticsDto OK
+     * @throws ApiError
+     */
+    public static postApiDataActivityProceduresGetstatistics(
+        xClientId: string,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfEntityStatisticsDto> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/activity-procedures/getstatistics',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
             },
         });
     }

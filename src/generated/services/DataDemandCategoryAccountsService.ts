@@ -4,10 +4,13 @@
 /* eslint-disable */
 import type { ApiCommandRequestOfDemandCategoryAccountDtoAndEmptyOptions } from '../models/ApiCommandRequestOfDemandCategoryAccountDtoAndEmptyOptions';
 import type { ApiCommandRequestOfIdDataAndEmptyOptions } from '../models/ApiCommandRequestOfIdDataAndEmptyOptions';
+import type { ApiCommandRequestOfListOfDemandCategoryAccountDtoAndBatchCommandOptions } from '../models/ApiCommandRequestOfListOfDemandCategoryAccountDtoAndBatchCommandOptions';
 import type { ApiCommandRequestOfListOfDemandCategoryAccountDtoAndEmptyOptions } from '../models/ApiCommandRequestOfListOfDemandCategoryAccountDtoAndEmptyOptions';
-import type { ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions } from '../models/ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions';
+import type { ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions } from '../models/ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions';
 import type { ApiQueryRequestOfIdData } from '../models/ApiQueryRequestOfIdData';
+import type { ApiQueryRequestOfIdsData } from '../models/ApiQueryRequestOfIdsData';
 import type { ApiResponseOfDemandCategoryAccountDto } from '../models/ApiResponseOfDemandCategoryAccountDto';
+import type { ApiResponseOfEntityStatisticsDto } from '../models/ApiResponseOfEntityStatisticsDto';
 import type { ApiResponseOfIdData } from '../models/ApiResponseOfIdData';
 import type { ApiResponseOfIReadOnlyListOfDemandCategoryAccountDto } from '../models/ApiResponseOfIReadOnlyListOfDemandCategoryAccountDto';
 import type { ApiResponseOfPagedResultOfDemandCategoryAccountDto } from '../models/ApiResponseOfPagedResultOfDemandCategoryAccountDto';
@@ -17,7 +20,6 @@ import { request as __request } from '../core/request';
 export class DataDemandCategoryAccountsService {
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
      * @returns ApiResponseOfDemandCategoryAccountDto OK
@@ -25,7 +27,6 @@ export class DataDemandCategoryAccountsService {
      */
     public static postApiDataDemandCategoryAccountsCreate(
         xClientId: string,
-        xTenantId: string,
         requestBody: ApiCommandRequestOfDemandCategoryAccountDtoAndEmptyOptions,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfDemandCategoryAccountDto> {
@@ -35,20 +36,13 @@ export class DataDemandCategoryAccountsService {
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                401: `Unauthorized`,
-                404: `Not Found`,
-            },
         });
     }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
      * @returns ApiResponseOfDemandCategoryAccountDto OK
@@ -56,7 +50,6 @@ export class DataDemandCategoryAccountsService {
      */
     public static postApiDataDemandCategoryAccountsUpdate(
         xClientId: string,
-        xTenantId: string,
         requestBody: ApiCommandRequestOfDemandCategoryAccountDtoAndEmptyOptions,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfDemandCategoryAccountDto> {
@@ -66,20 +59,13 @@ export class DataDemandCategoryAccountsService {
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                401: `Unauthorized`,
-                404: `Not Found`,
-            },
         });
     }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
      * @returns ApiResponseOfIdData OK
@@ -87,7 +73,6 @@ export class DataDemandCategoryAccountsService {
      */
     public static postApiDataDemandCategoryAccountsDelete(
         xClientId: string,
-        xTenantId: string,
         requestBody: ApiCommandRequestOfIdDataAndEmptyOptions,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfIdData> {
@@ -97,20 +82,13 @@ export class DataDemandCategoryAccountsService {
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                401: `Unauthorized`,
-                404: `Not Found`,
-            },
         });
     }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
      * @returns ApiResponseOfIReadOnlyListOfDemandCategoryAccountDto OK
@@ -118,8 +96,7 @@ export class DataDemandCategoryAccountsService {
      */
     public static postApiDataDemandCategoryAccountsBatch(
         xClientId: string,
-        xTenantId: string,
-        requestBody: ApiCommandRequestOfListOfDemandCategoryAccountDtoAndEmptyOptions,
+        requestBody: ApiCommandRequestOfListOfDemandCategoryAccountDtoAndBatchCommandOptions,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfIReadOnlyListOfDemandCategoryAccountDto> {
         return __request(OpenAPI, {
@@ -128,20 +105,13 @@ export class DataDemandCategoryAccountsService {
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                401: `Unauthorized`,
-                404: `Not Found`,
-            },
         });
     }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
      * @returns ApiResponseOfIReadOnlyListOfDemandCategoryAccountDto OK
@@ -149,7 +119,6 @@ export class DataDemandCategoryAccountsService {
      */
     public static postApiDataDemandCategoryAccountsBulk(
         xClientId: string,
-        xTenantId: string,
         requestBody: ApiCommandRequestOfListOfDemandCategoryAccountDtoAndEmptyOptions,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfIReadOnlyListOfDemandCategoryAccountDto> {
@@ -159,20 +128,13 @@ export class DataDemandCategoryAccountsService {
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                401: `Unauthorized`,
-                404: `Not Found`,
-            },
         });
     }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
      * @returns ApiResponseOfDemandCategoryAccountDto OK
@@ -180,7 +142,6 @@ export class DataDemandCategoryAccountsService {
      */
     public static postApiDataDemandCategoryAccountsGetbyid(
         xClientId: string,
-        xTenantId: string,
         requestBody: ApiQueryRequestOfIdData,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfDemandCategoryAccountDto> {
@@ -190,20 +151,36 @@ export class DataDemandCategoryAccountsService {
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                401: `Unauthorized`,
-                404: `Not Found`,
-            },
         });
     }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
+     * @param requestBody
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfIReadOnlyListOfDemandCategoryAccountDto OK
+     * @throws ApiError
+     */
+    public static postApiDataDemandCategoryAccountsGetbyids(
+        xClientId: string,
+        requestBody: ApiQueryRequestOfIdsData,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfIReadOnlyListOfDemandCategoryAccountDto> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/demand-category-accounts/getbyids',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
      * @returns ApiResponseOfIReadOnlyListOfDemandCategoryAccountDto OK
@@ -211,8 +188,7 @@ export class DataDemandCategoryAccountsService {
      */
     public static postApiDataDemandCategoryAccountsGetall(
         xClientId: string,
-        xTenantId: string,
-        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions,
+        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfIReadOnlyListOfDemandCategoryAccountDto> {
         return __request(OpenAPI, {
@@ -221,20 +197,13 @@ export class DataDemandCategoryAccountsService {
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                401: `Unauthorized`,
-                404: `Not Found`,
-            },
         });
     }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
      * @returns ApiResponseOfPagedResultOfDemandCategoryAccountDto OK
@@ -242,8 +211,7 @@ export class DataDemandCategoryAccountsService {
      */
     public static postApiDataDemandCategoryAccountsGetpaged(
         xClientId: string,
-        xTenantId: string,
-        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions,
+        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfPagedResultOfDemandCategoryAccountDto> {
         return __request(OpenAPI, {
@@ -252,14 +220,27 @@ export class DataDemandCategoryAccountsService {
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                401: `Unauthorized`,
-                404: `Not Found`,
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfEntityStatisticsDto OK
+     * @throws ApiError
+     */
+    public static postApiDataDemandCategoryAccountsGetstatistics(
+        xClientId: string,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfEntityStatisticsDto> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/demand-category-accounts/getstatistics',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
             },
         });
     }

@@ -7,7 +7,7 @@ export type ActivityProcedureDto = {
     activityId?: number | string;
     procedureId?: number | string;
     isCompleted?: boolean;
-    completedBy?: number | string;
+    completedBy?: number | string | null;
     completedAt?: any;
     notes?: string | null;
     isEnabled?: boolean;

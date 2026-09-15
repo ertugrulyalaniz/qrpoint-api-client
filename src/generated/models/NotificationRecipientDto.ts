@@ -5,7 +5,7 @@
 export type NotificationRecipientDto = {
     notificationRecipientId?: number | string;
     notificationId?: number | string;
-    userId?: number | string;
+    accountId?: number | string;
     isRead?: boolean;
 };
 

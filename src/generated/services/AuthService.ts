@@ -8,6 +8,7 @@ import type { LoginApiRequest } from '../models/LoginApiRequest';
 import type { LoginApiResponse } from '../models/LoginApiResponse';
 import type { LoginPinRequestApiRequest } from '../models/LoginPinRequestApiRequest';
 import type { RefreshTokenApiResponse } from '../models/RefreshTokenApiResponse';
+import type { SetDefaultAccountApiRequest } from '../models/SetDefaultAccountApiRequest';
 import type { CancelablePromise } from '../core/CancelablePromise';
 import { OpenAPI } from '../core/OpenAPI';
 import { request as __request } from '../core/request';
@@ -134,6 +135,7 @@ export class AuthService {
     }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
      * @returns ApiResponseOfEmptyData OK
@@ -141,6 +143,7 @@ export class AuthService {
      */
     public static postApiAuthCheckUserAccount(
         xClientId: string,
+        xTenantId: string,
         requestBody: CheckUserAccountApiRequest,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfEmptyData> {
@@ -150,11 +153,41 @@ export class AuthService {
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
+                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
             errors: {
                 400: `Bad Request`,
+                401: `Unauthorized`,
+            },
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param requestBody
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfEmptyData OK
+     * @throws ApiError
+     */
+    public static postApiAuthSetDefaultAccount(
+        xClientId: string,
+        requestBody: SetDefaultAccountApiRequest,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfEmptyData> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/auth/set-default-account',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+            errors: {
+                400: `Bad Request`,
+                401: `Unauthorized`,
+                404: `Not Found`,
             },
         });
     }

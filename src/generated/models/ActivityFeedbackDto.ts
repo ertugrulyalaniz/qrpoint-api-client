@@ -5,7 +5,7 @@
 export type ActivityFeedbackDto = {
     activityFeedbackId?: number | string;
     activityId?: number | string;
-    feedbackBy?: number | string;
+    feedbackBy?: number | string | null;
     feedbackAt?: any;
     feedbackScore?: number | string | null;
     comment?: string | null;

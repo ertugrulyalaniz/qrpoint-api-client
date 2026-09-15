@@ -4,19 +4,22 @@
 /* eslint-disable */
 import type { ApiCommandRequestOfIdDataAndEmptyOptions } from '../models/ApiCommandRequestOfIdDataAndEmptyOptions';
 import type { ApiCommandRequestOfInvalidAccessAttemptDtoAndEmptyOptions } from '../models/ApiCommandRequestOfInvalidAccessAttemptDtoAndEmptyOptions';
+import type { ApiCommandRequestOfListOfInvalidAccessAttemptDtoAndBatchCommandOptions } from '../models/ApiCommandRequestOfListOfInvalidAccessAttemptDtoAndBatchCommandOptions';
 import type { ApiCommandRequestOfListOfInvalidAccessAttemptDtoAndEmptyOptions } from '../models/ApiCommandRequestOfListOfInvalidAccessAttemptDtoAndEmptyOptions';
-import type { ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions } from '../models/ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions';
+import type { ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions } from '../models/ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions';
 import type { ApiQueryRequestOfIdData } from '../models/ApiQueryRequestOfIdData';
+import type { ApiQueryRequestOfIdsData } from '../models/ApiQueryRequestOfIdsData';
+import type { ApiResponseOfEntityStatisticsDto } from '../models/ApiResponseOfEntityStatisticsDto';
 import type { ApiResponseOfIdData } from '../models/ApiResponseOfIdData';
 import type { ApiResponseOfInvalidAccessAttemptDto } from '../models/ApiResponseOfInvalidAccessAttemptDto';
 import type { ApiResponseOfIReadOnlyListOfInvalidAccessAttemptDto } from '../models/ApiResponseOfIReadOnlyListOfInvalidAccessAttemptDto';
+import type { ApiResponseOfPagedResultOfInvalidAccessAttemptDto } from '../models/ApiResponseOfPagedResultOfInvalidAccessAttemptDto';
 import type { CancelablePromise } from '../core/CancelablePromise';
 import { OpenAPI } from '../core/OpenAPI';
 import { request as __request } from '../core/request';
 export class DataInvalidAccessAttemptsService {
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
      * @returns ApiResponseOfInvalidAccessAttemptDto OK
@@ -24,7 +27,6 @@ export class DataInvalidAccessAttemptsService {
      */
     public static postApiDataInvalidAccessAttemptsCreate(
         xClientId: string,
-        xTenantId: string,
         requestBody: ApiCommandRequestOfInvalidAccessAttemptDtoAndEmptyOptions,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfInvalidAccessAttemptDto> {
@@ -34,20 +36,13 @@ export class DataInvalidAccessAttemptsService {
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                401: `Unauthorized`,
-                404: `Not Found`,
-            },
         });
     }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
      * @returns ApiResponseOfInvalidAccessAttemptDto OK
@@ -55,7 +50,6 @@ export class DataInvalidAccessAttemptsService {
      */
     public static postApiDataInvalidAccessAttemptsUpdate(
         xClientId: string,
-        xTenantId: string,
         requestBody: ApiCommandRequestOfInvalidAccessAttemptDtoAndEmptyOptions,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfInvalidAccessAttemptDto> {
@@ -65,20 +59,13 @@ export class DataInvalidAccessAttemptsService {
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                401: `Unauthorized`,
-                404: `Not Found`,
-            },
         });
     }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
      * @returns ApiResponseOfIdData OK
@@ -86,7 +73,6 @@ export class DataInvalidAccessAttemptsService {
      */
     public static postApiDataInvalidAccessAttemptsDelete(
         xClientId: string,
-        xTenantId: string,
         requestBody: ApiCommandRequestOfIdDataAndEmptyOptions,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfIdData> {
@@ -96,20 +82,13 @@ export class DataInvalidAccessAttemptsService {
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                401: `Unauthorized`,
-                404: `Not Found`,
-            },
         });
     }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
      * @returns ApiResponseOfIReadOnlyListOfInvalidAccessAttemptDto OK
@@ -117,8 +96,7 @@ export class DataInvalidAccessAttemptsService {
      */
     public static postApiDataInvalidAccessAttemptsBatch(
         xClientId: string,
-        xTenantId: string,
-        requestBody: ApiCommandRequestOfListOfInvalidAccessAttemptDtoAndEmptyOptions,
+        requestBody: ApiCommandRequestOfListOfInvalidAccessAttemptDtoAndBatchCommandOptions,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfIReadOnlyListOfInvalidAccessAttemptDto> {
         return __request(OpenAPI, {
@@ -127,20 +105,13 @@ export class DataInvalidAccessAttemptsService {
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                401: `Unauthorized`,
-                404: `Not Found`,
-            },
         });
     }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
      * @returns ApiResponseOfIReadOnlyListOfInvalidAccessAttemptDto OK
@@ -148,7 +119,6 @@ export class DataInvalidAccessAttemptsService {
      */
     public static postApiDataInvalidAccessAttemptsBulk(
         xClientId: string,
-        xTenantId: string,
         requestBody: ApiCommandRequestOfListOfInvalidAccessAttemptDtoAndEmptyOptions,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfIReadOnlyListOfInvalidAccessAttemptDto> {
@@ -158,20 +128,13 @@ export class DataInvalidAccessAttemptsService {
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                401: `Unauthorized`,
-                404: `Not Found`,
-            },
         });
     }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
      * @returns ApiResponseOfInvalidAccessAttemptDto OK
@@ -179,7 +142,6 @@ export class DataInvalidAccessAttemptsService {
      */
     public static postApiDataInvalidAccessAttemptsGetbyid(
         xClientId: string,
-        xTenantId: string,
         requestBody: ApiQueryRequestOfIdData,
         acceptLanguage?: string,
     ): CancelablePromise<ApiResponseOfInvalidAccessAttemptDto> {
@@ -189,76 +151,96 @@ export class DataInvalidAccessAttemptsService {
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                401: `Unauthorized`,
-                404: `Not Found`,
-            },
         });
     }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
-     * @returns ApiResponseOfInvalidAccessAttemptDto OK
+     * @returns ApiResponseOfIReadOnlyListOfInvalidAccessAttemptDto OK
+     * @throws ApiError
+     */
+    public static postApiDataInvalidAccessAttemptsGetbyids(
+        xClientId: string,
+        requestBody: ApiQueryRequestOfIdsData,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfIReadOnlyListOfInvalidAccessAttemptDto> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/invalid-access-attempts/getbyids',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param requestBody
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfIReadOnlyListOfInvalidAccessAttemptDto OK
      * @throws ApiError
      */
     public static postApiDataInvalidAccessAttemptsGetall(
         xClientId: string,
-        xTenantId: string,
-        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions,
+        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions,
         acceptLanguage?: string,
-    ): CancelablePromise<ApiResponseOfInvalidAccessAttemptDto> {
+    ): CancelablePromise<ApiResponseOfIReadOnlyListOfInvalidAccessAttemptDto> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/api/data/invalid-access-attempts/getall',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                401: `Unauthorized`,
-                404: `Not Found`,
-            },
         });
     }
     /**
      * @param xClientId İstemci Kimliği (Zorunlu)
-     * @param xTenantId Tenant Kimliği (Zorunlu)
      * @param requestBody
      * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
-     * @returns ApiResponseOfInvalidAccessAttemptDto OK
+     * @returns ApiResponseOfPagedResultOfInvalidAccessAttemptDto OK
      * @throws ApiError
      */
     public static postApiDataInvalidAccessAttemptsGetpaged(
         xClientId: string,
-        xTenantId: string,
-        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndEmptyFiltersAndEmptySortAndEmptyOptions,
+        requestBody: ApiQueryRequestOfEmptyDataAndPagingDataAndListOfFilterItemAndListOfSortItemAndEmptyOptions,
         acceptLanguage?: string,
-    ): CancelablePromise<ApiResponseOfInvalidAccessAttemptDto> {
+    ): CancelablePromise<ApiResponseOfPagedResultOfInvalidAccessAttemptDto> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/api/data/invalid-access-attempts/getpaged',
             headers: {
                 'accept-language': acceptLanguage,
                 'x-client-id': xClientId,
-                'x-tenant-id': xTenantId,
             },
             body: requestBody,
             mediaType: 'application/json',
-            errors: {
-                400: `Bad Request`,
-                401: `Unauthorized`,
-                404: `Not Found`,
+        });
+    }
+    /**
+     * @param xClientId İstemci Kimliği (Zorunlu)
+     * @param acceptLanguage pass the locale here: examples like => tr,en, en-US
+     * @returns ApiResponseOfEntityStatisticsDto OK
+     * @throws ApiError
+     */
+    public static postApiDataInvalidAccessAttemptsGetstatistics(
+        xClientId: string,
+        acceptLanguage?: string,
+    ): CancelablePromise<ApiResponseOfEntityStatisticsDto> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/data/invalid-access-attempts/getstatistics',
+            headers: {
+                'accept-language': acceptLanguage,
+                'x-client-id': xClientId,
             },
         });
     }

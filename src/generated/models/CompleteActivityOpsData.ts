@@ -5,5 +5,7 @@
 export type CompleteActivityOpsData = {
     pointId: number | string;
     comment: string;
+    feedbackScore?: number | string | null;
+    feedbackComment?: string | null;
 };
 
