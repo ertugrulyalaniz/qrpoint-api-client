@@ -14,6 +14,7 @@ export type UserAccountDto = {
     phoneNumber: string;
     eMail?: string | null;
     registrationNumber?: string | null;
+    isAdmin?: boolean;
     isDefault?: boolean;
     isEnabled?: boolean;
     description?: string | null;

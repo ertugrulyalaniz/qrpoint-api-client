@@ -3,6 +3,7 @@
 /* tslint:disable */
 /* eslint-disable */
 export type UserProfileDto = {
+    isSystem?: boolean;
     userId?: number | string;
     phoneNumber: string;
     accounts?: any[] | null;

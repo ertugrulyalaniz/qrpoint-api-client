@@ -11,6 +11,7 @@ export type AccountDto = {
     phoneNumber?: string;
     eMail?: string;
     registrationNumber?: string | null;
+    isAdmin?: boolean;
     isEnabled?: boolean;
     description?: string | null;
 };

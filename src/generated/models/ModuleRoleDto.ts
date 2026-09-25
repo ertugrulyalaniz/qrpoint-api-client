@@ -2,14 +2,10 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-export type PageDto = {
-    pageId?: number | string;
-    pageName?: string;
+export type ModuleRoleDto = {
+    moduleRoleId?: number | string;
     moduleId?: number | string;
-    key?: string | null;
-    path?: string | null;
-    icon?: string | null;
+    roleId?: number | string;
     isEnabled?: boolean;
-    description?: string | null;
 };
 
