@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/ertugrulyalaniz/qrpoint-api-client/compare/v2.0.0...v2.1.0) (2026-09-25)
+
+
+### Features
+
+* **api:** sync client with backend (+30 endpoint, -182 endpoint, +16 model, -96 model) ([0ed4c44](https://github.com/ertugrulyalaniz/qrpoint-api-client/commit/0ed4c44835891c7d3651d51d74a7fd4d7b847d62))
+
 ## [2.0.0](https://github.com/ertugrulyalaniz/qrpoint-api-client/compare/v1.2.0...v2.0.0) (2026-09-15)
 
 
