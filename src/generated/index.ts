@@ -582,6 +582,7 @@ export type { AssetDto } from './models/AssetDto';
 export type { AssetStatusDto } from './models/AssetStatusDto';
 export type { AssetTypeDto } from './models/AssetTypeDto';
 export type { AssetTypeRoleDto } from './models/AssetTypeRoleDto';
+export type { AssignPointAttachment } from './models/AssignPointAttachment';
 export type { AssignPointOpsData } from './models/AssignPointOpsData';
 export type { AssignPointOpsResult } from './models/AssignPointOpsResult';
 export type { AttachmentTypeDto } from './models/AttachmentTypeDto';
@@ -597,6 +598,7 @@ export type { CheckUserAccountApiRequest } from './models/CheckUserAccountApiReq
 export type { CityDto } from './models/CityDto';
 export type { CleaningStatusDto } from './models/CleaningStatusDto';
 export type { CodeData } from './models/CodeData';
+export type { CompleteActivityAttachment } from './models/CompleteActivityAttachment';
 export type { CompleteActivityOpsData } from './models/CompleteActivityOpsData';
 export type { CompleteActivityOpsResult } from './models/CompleteActivityOpsResult';
 export type { CompleteWorkOpsData } from './models/CompleteWorkOpsData';

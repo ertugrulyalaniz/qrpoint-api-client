@@ -3,7 +3,7 @@
 /* tslint:disable */
 /* eslint-disable */
 export type UploadFileResult = {
-    id: string;
+    itemGuid: string;
     originalFileName: string;
     itemTypeId: number | string;
     size: number | string;

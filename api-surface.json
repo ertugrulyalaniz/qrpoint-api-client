@@ -1,7 +1,7 @@
 {
   "specUrl": "https://api.qrpoint.com.tr:6201/openapi/v1.json",
-  "specHash": "b3c31978c3ce67aa18a6d655cfed4360838720a2ec304f7082b1bbb1faeaec10",
-  "syncedAt": "2026-09-25T08:40:13.366Z",
+  "specHash": "4a0e11475d35719900351d70d0064422273d194a54d03b0a318f9660df5aafbe",
+  "syncedAt": "2026-09-27T15:25:26.631Z",
   "endpoints": [
     "GET /api/file-storage/{id}",
     "GET /api/organization-settings/getsettings",
@@ -1831,6 +1831,7 @@
     "AssetStatusDto",
     "AssetTypeDto",
     "AssetTypeRoleDto",
+    "AssignPointAttachment",
     "AssignPointOpsData",
     "AssignPointOpsResult",
     "AttachmentTypeDto",
@@ -1846,6 +1847,7 @@
     "CityDto",
     "CleaningStatusDto",
     "CodeData",
+    "CompleteActivityAttachment",
     "CompleteActivityOpsData",
     "CompleteActivityOpsResult",
     "CompleteWorkOpsData",

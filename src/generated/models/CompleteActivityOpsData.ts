@@ -7,5 +7,6 @@ export type CompleteActivityOpsData = {
     comment: string;
     feedbackScore?: number | string | null;
     feedbackComment?: string | null;
+    attachments?: any[] | null;
 };
 
