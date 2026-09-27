@@ -2,12 +2,84 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0](https://github.com/ertugrulyalaniz/qrpoint-api-client/compare/v2.1.0...v2.2.0) (2026-09-27)
+
+
+### Features
+
+* **api:** sync client with backend (+2 model) ([c32bd44](https://github.com/ertugrulyalaniz/qrpoint-api-client/commit/c32bd44b9580ae0297857fecb5bb87bb36e6f292))
+
+#### Ops: nokta atama ve aktivite tamamlamaya ek dosya desteği
+
+`/api/ops/point/assign` ve `/api/ops/activity/complete` istekleri artık `attachments` alanı kabul ediyor.
+
+| Model | Alanlar |
+| --- | --- |
+| `AssignPointAttachment` (yeni) | `attachmentGuid: string` (uuid), `attachmentTypeId: number \| string`, `description?: string \| null` |
+| `CompleteActivityAttachment` (yeni) | `attachmentGuid: string` (uuid), `attachmentTypeId: number \| string`, `description?: string \| null` |
+| `AssignPointOpsData` | `+ attachments?: AssignPointAttachment[] \| null` |
+| `CompleteActivityOpsData` | `+ attachments?: CompleteActivityAttachment[] \| null` |
+
+Akış: önce `/api/file-storage/upload` → dönen `itemGuid`'i `attachmentGuid` olarak gönder.
+
+> Codegen notu: spec `attachments` için `type: ["null","array"]` (OpenAPI 3.1) kullandığından `openapi-typescript-codegen` item tipini çözemiyor ve alan `any[] | null` olarak üretiliyor. `AssignPointAttachment` / `CompleteActivityAttachment` tipleri export ediliyor; çağıran tarafta bunlarla tipleyin.
+
+#### Alan yeniden adlandırma (dikkat)
+
+| Model | 2.1.0 | 2.2.0 |
+| --- | --- | --- |
+| `UploadFileResult` | `id: string` | `itemGuid: string` (uuid) |
+
+`/api/file-storage/upload` sonucunu `result.id` ile okuyan kod bu sürümde derlenmez; `result.itemGuid` kullanın.
+
 ## [2.1.0](https://github.com/ertugrulyalaniz/qrpoint-api-client/compare/v2.0.0...v2.1.0) (2026-09-25)
 
 
 ### Features
 
 * **api:** sync client with backend (+30 endpoint, -182 endpoint, +16 model, -96 model) ([0ed4c44](https://github.com/ertugrulyalaniz/qrpoint-api-client/commit/0ed4c44835891c7d3651d51d74a7fd4d7b847d62))
+
+#### Yetkilendirme modeli sadeleştirildi (backend)
+
+Granüler action/page/navigation bazlı rol atamaları kaldırıldı; yerine modül ve asset-type seviyesinde iki yeni rol servisi geldi.
+
+**Yeni servisler** (her biri standart 15 endpoint: `create`, `update`, `delete`, `batch`, `bulk`, `getall`, `getbyid`, `getbyids`, `getpaged`, `getstatistics`, `deleted/*` ×5):
+
+| Servis | Path | DTO |
+| --- | --- | --- |
+| `DataModuleRolesService` | `/api/data/module-roles/*` | `ModuleRoleDto { moduleRoleId, moduleId, roleId, isEnabled }` |
+| `DataAssetTypeRolesService` | `/api/data/asset-type-roles/*` | `AssetTypeRoleDto { assetTypeRoleId, assetTypeId, roleId, isEnabled }` |
+
+**Kaldırılan servisler** (12 servis, 182 endpoint, 96 model):
+
+| Servis | Yerine |
+| --- | --- |
+| `DataActionsService`, `DataActionRolesService` | `DataModuleRolesService` |
+| `DataAssetRolesService` | `DataAssetTypeRolesService` |
+| `DataSystemRolesService`, `DataUserSystemRolesService` | `DataRolesService` / `DataUserRolesService` (mevcut) |
+| `DataNavigationRolesService` | — |
+| `DataPageObjectsService`, `DataPageObjectRolesService` | — |
+| `DataPageAttributesService`, `DataPageRoleAttributesService` | — |
+| `DataPageObjectAttributesService`, `DataPageObjectRoleAttributesService` | — |
+
+Silinen tipler: `ActionDto`, `ActionRoleDto`, `AssetRoleDto`, `NavigationRoleDto`, `PageObjectDto`, `PageObjectRoleDto`, `PageAttributeDto`, `PageRoleAttributeDto`, `PageObjectAttributeDto`, `PageObjectRoleAttributeDto`, `SystemRoleDto`, `UserSystemRoleDto` ve bunların `ApiCommandRequestOf*`, `ApiResponseOf*`, `PagedResultOf*`, `IReadOnlyListOf*` sarmalayıcıları.
+
+#### Mevcut DTO'lara eklenen alanlar
+
+| DTO | Yeni alanlar |
+| --- | --- |
+| `NavigationDto` | `parentId`, `key`, `icon`, `pageId`, `displayOrder` |
+| `PageDto` | `key`, `path`, `icon` |
+| `AccountDto`, `UserAccountDto` | `isAdmin` |
+| `UserProfileDto` | `isSystem` |
+
+#### Migration
+
+Minor olarak yayınlandı, ancak yukarıdaki servisleri import eden uygulamalar derlenmez. Yükseltmeden önce:
+
+```
+grep -rE "Data(Actions|ActionRoles|AssetRoles|NavigationRoles|PageObjects|PageObjectRoles|PageAttributes|PageRoleAttributes|PageObjectAttributes|PageObjectRoleAttributes|SystemRoles|UserSystemRoles)Service" src
+```
 
 ## [2.0.0](https://github.com/ertugrulyalaniz/qrpoint-api-client/compare/v1.2.0...v2.0.0) (2026-09-15)
 
